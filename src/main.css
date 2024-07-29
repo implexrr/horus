@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+button {
+  all: unset;
+}
+
 input + button {
   position: relative;
 }
@@ -16,8 +20,4 @@ input + button::before {
 input + button::before {
   content: url('https://img.icons8.com/?size=10&id=7695&format=png&color=000000');
   color: red;
-}
-
-button {
-  all: unset;
 }
