@@ -1,7 +1,21 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  min-width: 300px;
+  border: solid 1px red;
+  /* overflow: scroll; */
+}
+
+#search-box {
+  border: solid 1px green;
+}
+
 
 button {
   all: unset;
@@ -14,7 +28,7 @@ input + button {
 input + button::before {
   position: absolute;
   right: 10px;
-  top: -12.5px;
+  top: -13px;
 }
 
 input + button::before {
