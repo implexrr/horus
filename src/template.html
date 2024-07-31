@@ -6,9 +6,13 @@
   <title>Document</title>
 </head>
 <body>
+  <div id="display-options">Imperial | Metric</div>
   <div id="quick-snapshot">
-    <div id="address">Toronto, ON, Canada</div>
-    
+    <div class="icon"><span>XX_XX</span></div>
+    <div class="description">Partially cloudy</div>
+    <div class="resolved-address"><span class="icon">XX_XX</span>Toronto, ON, Canada</div>
+    <div class="time"><span class="icon">XX_XX</span>13:04</div>
+    <div><span class="temp">XX_XX</span>31°C</div>
     <form id="weather-form">
       <div id="search-box">
         <input type="text" id="location" name="location" placeholder="Search Location" required/>
@@ -16,7 +20,103 @@
       </div>
     </form>
   </div>
-  <div id="current-conditions"></div>
-  <div id="future-conditions"></div>
+  <div id="current-conditions">
+    <div class="sunrise">
+      <div class="icon">XX_XX</div>
+      <div class="title">sunrise:</div>
+      <div class="data">06:09</div>
+    </div>
+    <div class="sunset">
+      <div class="icon">XX_XX</div>
+      <div class="title">sunset:</div>
+      <div class="data">20:41</div>
+    </div>
+    <div class="temp">
+      <div class="icon">XX_XX</div>
+      <div class="title">temp</div>
+      <div class="data">26.4°C</div>
+    </div>
+    <div class="visibility">
+      <div class="icon">XX_XX</div>
+      <div class="title">visibility</div>
+      <div class="data">24km</div>
+    </div>
+    <div class="winddir">
+      <div class="icon">XX_XX</div>
+      <div class="title">wind direction:</div>
+      <div class="data">314°</div>
+    </div>
+    <div class="windspeed">
+      <div class="icon">XX_XX</div>
+      <div class="title">wind speed:</div>
+      <div class="data">12kph</div>
+    </div>
+    <div class="precip">
+      <div class="icon">XX_XX</div>
+      <div class="title">precipitation:</div>
+      <div class="data">15mm</div>
+    </div>
+    <div class="precipprob">
+      <div class="icon">XX_XX</div>
+      <div class="title">precipitation probability:</div>
+      <div class="data">40%</div>
+    </div>
+    <div class="preciptype">
+      <div class="icon">XX_XX</div>
+      <div class="title">precipitation type:</div>
+      <div class="data">rain</div>
+    </div>
+  </div>
+  <div id="forecast-options">Weekly | Hourly</div>
+  <div id="future-conditions">
+    <div class="forecast-box daily">
+      <div class="icon">XX_XX</div>
+      <div class="conditions">Rain, Partially Cloudy</div>
+      <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+    </div>
+    <div class="forecast-box daily">
+      <div class="icon">XX_XX</div>
+      <div class="conditions">Rain, Partially Cloudy</div>
+      <div class="day"><span class="icon">XX_XX</span>Tues Aug 6</div>
+      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+    </div>
+    <div class="forecast-box daily">
+      <div class="icon">XX_XX</div>
+      <div class="conditions">Rain, Partially Cloudy</div>
+      <div class="day"><span class="icon">XX_XX</span>Wed Aug 7</div>
+      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+    </div>
+    <div class="forecast-box daily">
+      <div class="icon">XX_XX</div>
+      <div class="conditions">Rain, Partially Cloudy</div>
+      <div class="day"><span class="icon">XX_XX</span>Thu Aug 8</div>
+      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+    </div>
+    <div class="forecast-box daily">
+      <div class="icon">XX_XX</div>
+      <div class="conditions">Rain, Partially Cloudy</div>
+      <div class="day"><span class="icon">XX_XX</span>Fri Aug 9</div>
+      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+    </div>
+    <div class="forecast-box daily">
+      <div class="icon">XX_XX</div>
+      <div class="conditions">Rain, Partially Cloudy</div>
+      <div class="day"><span class="icon">XX_XX</span>Sat Aug 10</div>
+      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+    </div>
+    <div class="forecast-box daily">
+      <div class="icon">XX_XX</div>
+      <div class="conditions">Rain, Partially Cloudy</div>
+      <div class="day"><span class="icon">XX_XX</span>Sun Aug 11</div>
+      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+    </div>
+    <div class="forecast-box hourly">
+      <div class="icon">XX_XX</div>
+      <div class="conditions">Sunny</div>
+      <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 27°C</div>
+    </div>
+  </div>
 </body>
 </html>

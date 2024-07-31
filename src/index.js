@@ -19,9 +19,9 @@ const requiredCurrentInfo = [
 
 const requiredDailyInfo = ['conditions', 'icon', 'datetime', 'temp'];
 
-const requiredHourlyInfo = ['conditions', 'icon', 'datetime', 'temp'];
+const requiredHourlyInfo = ['conditions', 'icon', 'temp'];
 
-const requiredLocationInfo = ['resolvedAddress', 'latitude', 'longitude'];
+const requiredLocationInfo = ['resolvedAddress'];
 
 // Clear input form
 function clearForm() {
@@ -35,7 +35,6 @@ function clearForm() {
 function locationQueryValid() {
   const locationInputValue = document.querySelector('#location').value;
   const locationPattern = /^(?=.*[a-zA-Z])[a-zA-Z0-9, .-]+$/;
-  console.log(locationInputValue);
   return locationPattern.test(locationInputValue);
 }
 
@@ -78,7 +77,7 @@ function isValidResponse(response) {
 function logCurrentConditions(currentConditions) {
   console.log('logging snapshot of current conditions');
   for (let i = 0; i < requiredCurrentInfo.length; i += 1) {
-    console.log(currentConditions[requiredCurrentInfo[i]]);
+    console.log(`${requiredCurrentInfo[i]}: ${currentConditions[requiredCurrentInfo[i]]}`);
   }
 }
 
@@ -88,7 +87,7 @@ function logWeeklyForecast(weeklyData) {
   for (let day = 0; day < lengthOfWeek; day += 1) {
     console.log(`Forecast for day ${day}: `);
     for (let i = 0; i < requiredDailyInfo.length; i += 1) {
-      console.log(weeklyData[day][requiredDailyInfo[i]]);
+      console.log(`${requiredDailyInfo[i]} : ${weeklyData[day][requiredDailyInfo[i]]}`);
     }
   }
 }
@@ -99,7 +98,7 @@ function logHourlyForecast(hourlyData) {
   for (let hour = 0; hour < lengthOfDay; hour += 1) {
     console.log(`Forecast for hour ${hour}:`);
     for (let i = 0; i < requiredHourlyInfo.length; i += 1) {
-      console.log(hourlyData[requiredHourlyInfo[i]]);
+      console.log(`${requiredHourlyInfo[i]} : ${hourlyData[requiredHourlyInfo[i]]}`);
     }
   }
 }
@@ -108,7 +107,7 @@ function logHourlyForecast(hourlyData) {
 function logCurrentAddress(rawData) {
   console.log('logging location details: ');
   for (let i = 0; i < requiredLocationInfo.length; i += 1) {
-    console.log(rawData[requiredLocationInfo[i]]);
+    console.log(`${requiredLocationInfo[i]}: ${rawData[requiredLocationInfo[i]]}`);
   }
 }
 
