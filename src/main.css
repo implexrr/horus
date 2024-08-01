@@ -20,6 +20,7 @@ body > * {
 
 button {
   all: unset;
+  cursor: pointer;
 }
 
 input + button {
@@ -35,14 +36,12 @@ input + button::before {
 
  .forecast-box.hourly {
   background-color: rgba(154, 57, 57, 0.5);
+  display: none;
  }
 
  .forecast-box.daily {
   background-color: rgba(58, 157, 86, 0.5);
- }
-
- .forecast-box.hourly {
-  display: none;
+  /* display: none; */
  }
 
  #future-conditions {
