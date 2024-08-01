@@ -34,20 +34,24 @@ input + button::before {
   content: url('https://img.icons8.com/?size=10&id=7695&format=png&color=000000');
 }
 
- .forecast-box.hourly {
+
+
+ .forecast-card.hourly {
   background-color: rgba(154, 57, 57, 0.5);
-  display: none;
  }
 
- .forecast-box.daily {
+ .forecast-card.daily {
   background-color: rgba(58, 157, 86, 0.5);
-  /* display: none; */
  }
 
  #future-conditions {
-  /* display: flex; */
+  display: flex;
  }
 
  #current-conditions {
   /* display: flex; */
+ }
+
+ .invisible {
+  display: none;
  }

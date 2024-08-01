@@ -14,7 +14,11 @@
     <div class="description">Partially cloudy</div>
     <div class="resolved-address"><span class="icon">XX_XX</span>Toronto, ON, Canada</div>
     <div class="time"><span class="icon">XX_XX</span>13:04</div>
-    <div><span class="temp">XX_XX</span>31°C</div>
+    <div>
+      <span class="temp">XX_XX</span>
+      <span class="metric">31°C</span>
+      <span class="imperial invisible">87.8°F</span>
+    </div>
     <form id="weather-form">
       <div id="search-box">
         <input type="text" id="location" name="location" placeholder="Search Location" required/>
@@ -36,27 +40,35 @@
     <div class="temp">
       <div class="icon">XX_XX</div>
       <div class="title">temp</div>
-      <div class="data">26.4°C</div>
+      <div class="data">
+        <span class="metric">26.4°C</span>
+        <span class="imperial invisible">79.5°F</span>
+      </div>
     </div>
     <div class="visibility">
       <div class="icon">XX_XX</div>
       <div class="title">visibility</div>
-      <div class="data">24km</div>
+      <div class="data">
+        <span class="metric">24km</span>
+        <span class="imperial invisible">14.9mi</span>
+      </div>
     </div>
     <div class="winddir">
       <div class="icon">XX_XX</div>
       <div class="title">wind direction:</div>
-      <div class="data">314°</div>
+      <div class="data">NW</div>
     </div>
     <div class="windspeed">
       <div class="icon">XX_XX</div>
       <div class="title">wind speed:</div>
-      <div class="data">12kph</div>
+      <span class="metric">12kph</span>
+      <span class="imperial invisible">7.5mph</span>
     </div>
     <div class="precip">
       <div class="icon">XX_XX</div>
       <div class="title">precipitation:</div>
-      <div class="data">15mm</div>
+      <span class="metric">15mm</span>
+      <span class="imperial invisible">0.6in</span>
     </div>
     <div class="precipprob">
       <div class="icon">XX_XX</div>
@@ -71,53 +83,93 @@
   </div>
   <div id="forecast-options"><button class="daily">Daily</button> | <button class="hourly">Hourly</button></div>
   <div id="future-conditions">
-    <div class="forecast-box daily">
+    <div class="forecast-card daily">
       <div class="icon">XX_XX</div>
       <div class="conditions">Rain, Partially Cloudy</div>
       <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
-      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+      <div class="temperature">
+        <span class="icon">XX_XX</span>
+        <span class="title">Temperature</span>
+        <span class="metric">24°C</span>
+        <span class="imperial invisible">75.2°F</span>
+      </div>
     </div>
-    <div class="forecast-box daily">
+    <div class="forecast-card daily">
       <div class="icon">XX_XX</div>
       <div class="conditions">Rain, Partially Cloudy</div>
-      <div class="day"><span class="icon">XX_XX</span>Tues Aug 6</div>
-      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+      <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+      <div class="temperature">
+        <span class="icon">XX_XX</span>
+        <span class="title">Temperature</span>
+        <span class="metric">24°C</span>
+        <span class="imperial invisible">75.2°F</span>
+      </div>
     </div>
-    <div class="forecast-box daily">
+    <div class="forecast-card daily">
       <div class="icon">XX_XX</div>
       <div class="conditions">Rain, Partially Cloudy</div>
-      <div class="day"><span class="icon">XX_XX</span>Wed Aug 7</div>
-      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+      <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+      <div class="temperature">
+        <span class="icon">XX_XX</span>
+        <span class="title">Temperature</span>
+        <span class="metric">24°C</span>
+        <span class="imperial invisible">75.2°F</span>
+      </div>
     </div>
-    <div class="forecast-box daily">
+    <div class="forecast-card daily">
       <div class="icon">XX_XX</div>
       <div class="conditions">Rain, Partially Cloudy</div>
-      <div class="day"><span class="icon">XX_XX</span>Thu Aug 8</div>
-      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+      <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+      <div class="temperature">
+        <span class="icon">XX_XX</span>
+        <span class="title">Temperature</span>
+        <span class="metric">24°C</span>
+        <span class="imperial invisible">75.2°F</span>
+      </div>
     </div>
-    <div class="forecast-box daily">
+    <div class="forecast-card daily">
       <div class="icon">XX_XX</div>
       <div class="conditions">Rain, Partially Cloudy</div>
-      <div class="day"><span class="icon">XX_XX</span>Fri Aug 9</div>
-      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+      <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+      <div class="temperature">
+        <span class="icon">XX_XX</span>
+        <span class="title">Temperature</span>
+        <span class="metric">24°C</span>
+        <span class="imperial invisible">75.2°F</span>
+      </div>
     </div>
-    <div class="forecast-box daily">
+    <div class="forecast-card daily">
       <div class="icon">XX_XX</div>
       <div class="conditions">Rain, Partially Cloudy</div>
-      <div class="day"><span class="icon">XX_XX</span>Sat Aug 10</div>
-      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
+      <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+      <div class="temperature">
+        <span class="icon">XX_XX</span>
+        <span class="title">Temperature</span>
+        <span class="metric">24°C</span>
+        <span class="imperial invisible">75.2°F</span>
+      </div>
     </div>
-    <div class="forecast-box daily">
+    <div class="forecast-card daily">
       <div class="icon">XX_XX</div>
       <div class="conditions">Rain, Partially Cloudy</div>
-      <div class="day"><span class="icon">XX_XX</span>Sun Aug 11</div>
-      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 24°C</div>
-    </div>
-    <div class="forecast-box hourly">
+      <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+      <div class="temperature">
+        <span class="icon">XX_XX</span>
+        <span class="title">Temperature</span>
+        <span class="metric">24°C</span>
+        <span class="imperial invisible">75.2°F</span>
+      </div>
+    </div>    
+    <div class="forecast-card hourly invisible">
       <div class="icon">XX_XX</div>
       <div class="conditions">Sunny</div>
       <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-      <div class="temperature"><span class="icon">XX_XX</span>Temperature: 27°C</div>
+      <div class="temperature">
+        <span class="icon">XX_XX</span>
+        <span class="title">Temperature</span>
+        <span class="metric">24°C</span>
+        <span class="imperial invisible">75.2°F</span>
+      </div>
     </div>
   </div>
 </body>
