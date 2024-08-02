@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
 html {
   height: 100%;
 }
@@ -12,12 +14,91 @@ body {
   min-width: fit-content;
   width: 100%;
   border: solid 1px red;
+  display: grid;
+  grid-template-rows: fit-content 1fr;
 }
 
 body > * {
-  border: solid 1px black;
+  border: solid black;
 }
 
+#top {
+  display: grid;
+  grid-template-areas: 
+    "header header header header header"
+    "left left left right right"
+    "left left left right right"
+    "left left left right right"
+    "left left left right right"
+    "left left left right right";
+}
+
+#top > * {
+  /* border: solid green; */
+}
+
+#display-options {
+  grid-area: header;
+  padding: 3px;
+  text-align: center;
+}
+
+#snapshot-container {
+  grid-area: left;
+  padding: 3px;
+  display: flex;
+  justify-content: start;
+}
+
+#current-conditions-container {
+  grid-area: right;
+  padding: 3px;
+  display: flex;
+  justify-content: end;
+}
+
+#current-conditions, #snapshot {
+  /* border: solid blue; */
+}
+
+/* ------------------ */
+
+#bottom {
+  /* border: solid 5px purple; */
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+#forecast-options {
+  padding: 3px;
+  text-align: center;
+  /* border: solid red; */
+}
+
+#future-conditions {
+  height: 100%;
+}
+
+.forecast {
+  padding: 3px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.forecast-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+
+
+
+/* -------------- */
 button {
   all: unset;
   cursor: pointer;
@@ -42,14 +123,6 @@ input + button::before {
 
  .forecast-card.daily {
   background-color: rgba(58, 157, 86, 0.5);
- }
-
- #future-conditions {
-  /* display: flex; */
- }
-
- #current-conditions {
-  /* display: flex; */
  }
 
  .invisible {

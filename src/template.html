@@ -10,460 +10,462 @@
     <div id="display-options">
       <button class="imperial">Imperial</button> | <button class="metric">Metric</button>
     </div>
-    <div id="quick-snapshot">
-      <div class="icon"><span>XX_XX</span></div>
-      <div class="description">Partially cloudy</div>
-      <div class="resolved-address"><span class="icon">XX_XX</span>Toronto, ON, Canada</div>
-      <div class="time"><span class="icon">XX_XX</span>13:04</div>
-      <div>
-        <span class="temp">XX_XX</span>
-        <span class="metric">31°C</span>
-        <span class="imperial invisible">87.8°F</span>
-      </div>
-      <form id="weather-form">
-        <div id="search-box">
-          <input type="text" id="location" name="location" placeholder="Search Location" required/>
-          <button></button>
+    <div id="snapshot-container">
+      <div id="snapshot">
+        <div class="icon"><span>XX_XX</span></div>
+        <div class="description">Partially cloudy</div>
+        <div class="resolved-address"><span class="icon">XX_XX </span>Toronto, ON, Canada</div>
+        <div class="time"><span class="icon">XX_XX </span>13:04</div>
+        <div>
+          <span class="temp">XX_XX </span>
+          <span class="metric">31°C</span>
+          <span class="imperial invisible">87.8°F</span>
         </div>
-      </form>
+        <form id="weather-form">
+          <div id="search-box">
+            <input type="text" id="location" name="location" placeholder="Search Location" required/>
+            <button></button>
+          </div>
+        </form>
+      </div>  
     </div>
-    <div id="current-conditions">
-      <div class="sunrise">
-        <div class="icon">XX_XX</div>
-        <div class="title">sunrise:</div>
-        <div class="data">06:09</div>
-      </div>
-      <div class="sunset">
-        <div class="icon">XX_XX</div>
-        <div class="title">sunset:</div>
-        <div class="data">20:41</div>
-      </div>
-      <div class="temp">
-        <div class="icon">XX_XX</div>
-        <div class="title">temperature:</div>
-        <div class="data">
-          <span class="metric">26.4°C</span>
-          <span class="metric feelslike">(Feels like: 27.1°C)</span>
-          <span class="imperial invisible">79.5°F</span>
-          <span class="imperial feelslike invisible">(Feels like: 80.8°F)</span>
+    <div id="current-conditions-container">
+      <div id="current-conditions">
+        <div class="sunrise">
+          <span class="icon">XX_XX</span>
+          <span class="title">sunrise:</span>
+          <span class="data">06:09</span>
         </div>
-      </div>
-      <div class="humidity">
-        <div class="icon">XX_XX</div>
-        <div class="title">humidity</div>
-        <div class="data">14%</div>
-      </div>
-
-      <div class="visibility">
-        <div class="icon">XX_XX</div>
-        <div class="title">visibility</div>
-        <div class="data">
-          <span class="metric">24km</span>
-          <span class="imperial invisible">14.9mi</span>
+        <div class="sunset">
+          <span class="icon">XX_XX</span>
+          <span class="title">sunset:</span>
+          <span class="data">20:41</span>
         </div>
-      </div>
-      <div class="winddir">
-        <div class="icon">XX_XX</div>
-        <div class="title">wind direction:</div>
-        <div class="data">NW</div>
-      </div>
-      <div class="windspeed">
-        <div class="icon">XX_XX</div>
-        <div class="title">wind speed:</div>
-        <span class="metric">12kph</span>
-        <span class="imperial invisible">7.5mph</span>
-      </div>
-      <div class="precip">
-        <div class="icon">XX_XX</div>
-        <div class="title">precipitation:</div>
-        <span class="metric">15mm</span>
-        <span class="imperial invisible">0.6in</span>
-      </div>
-      <div class="precipprob">
-        <div class="icon">XX_XX</div>
-        <div class="title">precipitation probability:</div>
-        <div class="data">40%</div>
-      </div>
-      <div class="preciptype">
-        <div class="icon">XX_XX</div>
-        <div class="title">precipitation type:</div>
-        <div class="data">rain</div>
+        <div class="temp">
+          <span class="icon">XX_XX</span>
+          <span class="title">temperature:</span>
+          <span class="data">
+            <span class="metric">26.4°C</span>
+            <div class="metric feelslike">(Feels like: 27.1°C)</div>
+            <span class="imperial invisible">79.5°F</span>
+            <div class="imperial feelslike invisible">(Feels like: 80.8°F)</div>
+          </span>
+        </div>
+        <div class="humidity">
+          <span class="icon">XX_XX</span>
+          <span class="title">humidity</span>
+          <span class="data">14%</span>
+        </div>
+        <div class="visibility">
+          <span class="icon">XX_XX</span>
+          <span class="title">visibility</span>
+          <span class="data">
+            <span class="metric">24km</span>
+            <span class="imperial invisible">14.9mi</span>
+          </span>
+        </div>
+        <div class="winddir">
+          <span class="icon">XX_XX</span>
+          <span class="title">wind direction:</span>
+          <span class="data">NW</span>
+        </div>
+        <div class="windspeed">
+          <span class="icon">XX_XX</span>
+          <span class="title">wind speed:</span>
+          <span class="metric">12kph</span>
+          <span class="imperial invisible">7.5mph</span>
+        </div>
+        <div class="precip">
+          <span class="icon">XX_XX</span>
+          <span class="title">precipitation:</span>
+          <span class="metric">15mm</span>
+          <span class="imperial invisible">0.6in</span>
+        </div>
+        <div class="precipprob">
+          <span class="icon">XX_XX</span>
+          <span class="title">precipitation probability:</span>
+          <span class="data">40%</span>
+        </div>
+        <div class="preciptype">
+          <span class="icon">XX_XX</span>
+          <span class="title">precipitation type:</span>
+          <span class="data">rain</span>
+        </div>
       </div>
     </div>
-  
   </div>
   <div id="bottom">
-
-  </div>
-  <div id="forecast-options"><button class="daily">Daily</button> | <button class="hourly">Hourly</button></div>
-  <div id="future-conditions">
-    <div class="daily-forecast">
-      <div class="forecast-card daily">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Rain, Partially Cloudy</div>
-        <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
+    <div id="forecast-options"><button class="daily">Daily</button> | <button class="hourly">Hourly</button></div>
+    <div id="future-conditions">
+      <div class="daily-forecast forecast">
+        <div class="forecast-card daily">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Rain, Partially Cloudy</div>
+          <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card daily">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Rain, Partially Cloudy</div>
+          <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card daily">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Rain, Partially Cloudy</div>
+          <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card daily">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Rain, Partially Cloudy</div>
+          <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card daily">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Rain, Partially Cloudy</div>
+          <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card daily">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Rain, Partially Cloudy</div>
+          <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card daily">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Rain, Partially Cloudy</div>
+          <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
         </div>
       </div>
-      <div class="forecast-card daily">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Rain, Partially Cloudy</div>
-        <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
+      <div class="hourly-forecast invisible forecast">
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
         </div>
-      </div>
-      <div class="forecast-card daily">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Rain, Partially Cloudy</div>
-        <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
         </div>
-      </div>
-      <div class="forecast-card daily">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Rain, Partially Cloudy</div>
-        <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
         </div>
-      </div>
-      <div class="forecast-card daily">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Rain, Partially Cloudy</div>
-        <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
         </div>
-      </div>
-      <div class="forecast-card daily">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Rain, Partially Cloudy</div>
-        <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
         </div>
-      </div>
-      <div class="forecast-card daily">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Rain, Partially Cloudy</div>
-        <div class="day"><span class="icon">XX_XX</span>Mon Aug 5</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
         </div>
-      </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>
+        <div class="forecast-card hourly">
+          <div class="icon">XX_XX</div>
+          <div class="conditions">Sunny</div>
+          <div class="hour"><span class="icon">XX_XX</span>22:00</div>
+          <div class="temperature">
+            <span class="icon">XX_XX</span>
+            <span class="title">Temperature</span>
+            <span class="metric">24°C</span>
+            <span class="imperial invisible">75.2°F</span>
+          </div>
+        </div>  
+      </div>    
     </div>
-    <div class="hourly-forecast invisible">
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>
-      <div class="forecast-card hourly">
-        <div class="icon">XX_XX</div>
-        <div class="conditions">Sunny</div>
-        <div class="hour"><span class="icon">XX_XX</span>22:00</div>
-        <div class="temperature">
-          <span class="icon">XX_XX</span>
-          <span class="title">Temperature</span>
-          <span class="metric">24°C</span>
-          <span class="imperial invisible">75.2°F</span>
-        </div>
-      </div>  
-    </div>    
   </div>
+
 </body>
 </html>
