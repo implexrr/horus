@@ -13,9 +13,9 @@ body {
   min-height: 100%;
   min-width: fit-content;
   width: 100%;
-  border: solid 1px red;
+  border: solid red;
   display: grid;
-  grid-template-rows: fit-content 1fr;
+  grid-template-rows: min-content 1fr;
 }
 
 body > * {
@@ -31,10 +31,6 @@ body > * {
     "left left left right right"
     "left left left right right"
     "left left left right right";
-}
-
-#top > * {
-  /* border: solid green; */
 }
 
 #display-options {
@@ -57,14 +53,9 @@ body > * {
   justify-content: end;
 }
 
-#current-conditions, #snapshot {
-  /* border: solid blue; */
-}
-
 /* ------------------ */
 
 #bottom {
-  /* border: solid 5px purple; */
   display: grid;
   grid-template-rows: min-content 1fr;
 }
@@ -72,7 +63,6 @@ body > * {
 #forecast-options {
   padding: 3px;
   text-align: center;
-  /* border: solid red; */
 }
 
 #future-conditions {
@@ -92,7 +82,6 @@ body > * {
   width: 100%;
   height: 100%;
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
 }
 
@@ -114,8 +103,6 @@ input + button::before {
   top: -13px;
   content: url('https://img.icons8.com/?size=10&id=7695&format=png&color=000000');
 }
-
-
 
  .forecast-card.hourly {
   background-color: rgba(154, 57, 57, 0.5);
