@@ -14,5 +14,6 @@
       "sourceType": "module"
   },
   "rules": {
+    // "linebreak-style": 0 //disable crlf/lf breakline controls
   }
 }
