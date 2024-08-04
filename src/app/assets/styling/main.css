@@ -33,7 +33,7 @@ body > * {
     "left left left right right";
 }
 
-#display-options {
+#unit-options {
   grid-area: header;
   padding: 3px;
   text-align: center;
