@@ -1,13 +1,24 @@
-import createTopEl from '../components/top';
-import createBottomEl from '../components/bottom';
+import synthesizeElement from '../utils/synthesizeElement';
+import currentConditionsContainerEl from '../components/containers/currentConditionsContainer';
+import forecastContainerEl from '../components/containers/forecastContainer';
+import snapshotContainerEl from '../components/containers/snapshotContainer';
+import displayOptionsEl from '../components/displayOptions';
+import forecastOptionsEl from '../components/forecastOptions';
+import appendChildren from '../utils/appendChildren';
+
+function topEl() {
+  const e = synthesizeElement('div', { id: 'top' });
+  appendChildren(e, displayOptionsEl(), snapshotContainerEl(), currentConditionsContainerEl())
+  return e;
+}
+
+function bottomEl() {
+  const e = synthesizeElement('div', { id: 'bottom' });
+  appendChildren(e, forecastOptionsEl(), forecastContainerEl());
+  return e;
+}
 
 export default function generateHomePage() {
-  const topEl = createTopEl();
-  const bottomEl = createBottomEl();
-  const toAppend = [topEl, bottomEl];
   const bodyEl = document.querySelector('body');
-
-  for (let i = 0; i < toAppend.length; i += 1) {
-    bodyEl.appendChild(toAppend[i]);
-  }
+  appendChildren(bodyEl, topEl(), bottomEl());
 }
