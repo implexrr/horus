@@ -7,15 +7,15 @@ import forecastOptionsEl from '../components/displayOptions/forecastOptions';
 import appendChildren from '../utils/appendChildren';
 
 function topEl() {
-  const e = synthesizeElement('div', { id: 'top' });
-  appendChildren(e, unitOptionsEl(), snapshotContainerEl(), currentConditionsContainerEl());
-  return e;
+  const el = synthesizeElement('div', { id: 'top' });
+  appendChildren(el, unitOptionsEl(), snapshotContainerEl(), currentConditionsContainerEl());
+  return el;
 }
 
 function bottomEl() {
-  const e = synthesizeElement('div', { id: 'bottom' });
-  appendChildren(e, forecastOptionsEl(), forecastContainerEl());
-  return e;
+  const el = synthesizeElement('div', { id: 'bottom' });
+  appendChildren(el, forecastOptionsEl(), forecastContainerEl());
+  return el;
 }
 
 export default function generateHomePage() {
