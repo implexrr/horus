@@ -5,6 +5,7 @@ import snapshotContainerEl from '../components/containers/snapshotContainer';
 import unitOptionsEl from '../components/displayOptions/unitOptions';
 import forecastOptionsEl from '../components/displayOptions/forecastOptions';
 import appendChildren from '../utils/appendChildren';
+import fakefxn from '../services/weatherData';
 
 function topEl() {
   const el = synthesizeElement('div', { id: 'top' });
@@ -18,7 +19,12 @@ function bottomEl() {
   return el;
 }
 
-export default function generateHomePage() {
+async function generateHomePage() {
+  console.log(window.fakedata);
+  window.fakedata = await fakefxn(); // this pauses the entire async function after this line
+  console.log(window.fakedata);
   const bodyEl = document.querySelector('body');
   appendChildren(bodyEl, topEl(), bottomEl());
 }
+
+export { generateHomePage };
