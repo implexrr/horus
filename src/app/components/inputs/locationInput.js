@@ -1,6 +1,6 @@
 import synthesizeElement from '../../utils/synthesizeElement';
 
-export default function locationInput() {
+const locationInput = () => {
   const el = synthesizeElement('input', {
     type: 'text',
     id: 'location',
@@ -9,4 +9,6 @@ export default function locationInput() {
   });
   el.required = true;
   return el;
-}
+};
+
+export default locationInput;

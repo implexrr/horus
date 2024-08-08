@@ -1,6 +1,8 @@
 import synthesizeElement from '../../utils/synthesizeElement';
 
-export default function forecastContainerEl() {
+const forecastContainerEl = () => {
   const el = synthesizeElement('div', { id: 'forecast-container' });
   return el;
-}
+};
+
+export default forecastContainerEl;
