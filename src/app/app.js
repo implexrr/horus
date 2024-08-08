@@ -7,7 +7,12 @@ function clearContent() {
 async function reloadHomepage(e) {
   e.preventDefault();
   const newData = document.querySelector('#location').value;
-  const unitType = document.querySelector('.unit-selected');
+  let unitType = document.querySelector('.unit-selected');
+  if (unitType.classList.contains('metric')) {
+    unitType = 'metric';
+  } else {
+    unitType = 'imperial';
+  }
   clearContent();
   await homepage(newData, unitType);
   document.querySelector('#weather-form').addEventListener('submit', reloadHomepage);

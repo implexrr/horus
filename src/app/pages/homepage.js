@@ -10,8 +10,7 @@ import selectUnits from '../services/selectUnits';
 
 const topEl = (rawData) => {
   const el = synthesizeElement('div', { id: 'top' });
-  // el.textContent = rawData.latitude; // proof of concept, delete later
-  appendChildren(el, unitOptionsEl(), snapshotContainerEl(), currentConditionsContainerEl());
+  appendChildren(el, unitOptionsEl(), snapshotContainerEl(rawData), currentConditionsContainerEl());
   return el;
 };
 

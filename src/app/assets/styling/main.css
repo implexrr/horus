@@ -115,3 +115,7 @@ input + button::before {
  .invisible {
   display: none;
  }
+
+ .unit-selected {
+  color: red;
+ }
