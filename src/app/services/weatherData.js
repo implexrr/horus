@@ -17,7 +17,7 @@ function pullLocation(locationQuery) {
 
 function generateURL(locationQuery) {
   const location = pullLocation(locationQuery);
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=${API_KEY}`;
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?iconSet=icons2&unitGroup=metric&key=${API_KEY}`;
   return url;
 }
 

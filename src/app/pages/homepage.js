@@ -9,7 +9,7 @@ import getRawData from '../services/weatherData';
 
 const topEl = (rawData) => {
   const el = synthesizeElement('div', { id: 'top' });
-  el.textContent = rawData.latitude; // proof of concept, delete later
+  // el.textContent = rawData.latitude; // proof of concept, delete later
   appendChildren(el, unitOptionsEl(), snapshotContainerEl(), currentConditionsContainerEl());
   return el;
 };
