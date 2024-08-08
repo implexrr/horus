@@ -5,9 +5,11 @@ import snapshotContainerEl from '../components/containers/snapshotContainer';
 import unitOptionsEl from '../components/displayOptions/unitOptions';
 import forecastOptionsEl from '../components/displayOptions/forecastOptions';
 import appendChildren from '../utils/appendChildren';
+import getRawData from '../services/weatherData';
 
-const topEl = () => {
+const topEl = (rawData) => {
   const el = synthesizeElement('div', { id: 'top' });
+  el.textContent = rawData.latitude; // proof of concept, delete later
   appendChildren(el, unitOptionsEl(), snapshotContainerEl(), currentConditionsContainerEl());
   return el;
 };
@@ -18,9 +20,11 @@ const bottomEl = () => {
   return el;
 };
 
-const homepage = async () => {
+const homepage = async (locationQuery) => {
+  const rawData = await getRawData(locationQuery);
+  console.log(rawData);
   const bodyEl = document.querySelector('body');
-  appendChildren(bodyEl, topEl(), bottomEl());
+  appendChildren(bodyEl, topEl(rawData), bottomEl());
 };
 
 export default homepage;

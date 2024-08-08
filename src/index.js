@@ -1,4 +1,4 @@
 import './app/assets/styling/main.css';
-import homepage from './app/pages/homepage';
+import initialLoad from './app/app';
 
-homepage();
+initialLoad('Hamilton, Ontario');
