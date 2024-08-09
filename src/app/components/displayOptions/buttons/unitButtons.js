@@ -1,17 +1,17 @@
-import synthesizeElement from '../../utils/synthesizeElement';
-import displayData from '../../services/selectUnits';
+import synthesizeElement from '../../../utils/synthesizeElement';
+import { changeSystem } from '../../../services/selectSystem';
 
 const imperialButtonEl = () => {
   const e = synthesizeElement('button', { class: 'imperial' });
   e.textContent = 'Imperial';
-  e.addEventListener('click', () => { displayData('imperial'); });
+  e.addEventListener('click', () => { changeSystem('imperial'); });
   return e;
 };
 
 const metricButtonEl = () => {
   const e = synthesizeElement('button', { class: 'metric' });
   e.textContent = 'Metric';
-  e.addEventListener('click', () => { displayData('metric'); });
+  e.addEventListener('click', () => { changeSystem('metric'); });
   return e;
 };
 

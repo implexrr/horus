@@ -1,4 +1,4 @@
-import synthesizeElement from '../../utils/synthesizeElement';
+import synthesizeElement from '../../../utils/synthesizeElement';
 
 const dailyButtonEl = () => {
   const e = synthesizeElement('button', { class: 'daily' });

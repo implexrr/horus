@@ -1,4 +1,5 @@
 import homepage from './pages/homepage';
+import { getCurrentSystem } from './services/selectSystem';
 
 function clearContent() {
   document.querySelector('body').textContent = '';
@@ -7,12 +8,7 @@ function clearContent() {
 async function reloadHomepage(e) {
   e.preventDefault();
   const newData = document.querySelector('#location').value;
-  let unitType = document.querySelector('.unit-selected');
-  if (unitType.classList.contains('metric')) {
-    unitType = 'metric';
-  } else {
-    unitType = 'imperial';
-  }
+  const unitType = getCurrentSystem();
   clearContent();
   await homepage(newData, unitType);
   document.querySelector('#weather-form').addEventListener('submit', reloadHomepage);
