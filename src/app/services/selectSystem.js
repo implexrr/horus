@@ -19,10 +19,8 @@ function selectUnitSystem(oldSys, newSys) {
 
 export default function changeSystem(unitType) {
   if (unitType === 'metric') {
-    // console.log('loading metric data');
     selectUnitSystem('imperial', unitType);
   } else {
-    // console.log('loading imperial data');
     selectUnitSystem('metric', unitType);
   }
   displayData(unitType);
