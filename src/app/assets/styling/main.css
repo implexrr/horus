@@ -143,3 +143,45 @@ input + button::before {
  .unit-selected {
   color: red;
  }
+
+ /* icons */
+
+
+
+#snapshot > div {
+  display: flex;
+  border: solid 1px red;
+}
+
+#snapshot .conditions {
+  display: block;
+  border: solid blue;
+}
+
+#snapshot .conditions div.icon {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/location.svg);
+  margin-right: 3px;
+}
+
+#snapshot .resolvedAddress div.icon {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/location.svg);
+  margin-right: 3px;
+}
+
+#snapshot .datetime div.icon {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/datetime.svg);
+  margin-right: 3px;
+}
+
+#snapshot .temp div.icon {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/datetime.svg);
+  margin-right: 3px;
+}
