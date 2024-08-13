@@ -1,7 +1,17 @@
+@font-face {
+  font-family: 'oldSchool';
+  src: url('../fonts/oldschool.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'oldSchool';
+  font-size: 93%;
 }
 
 
@@ -13,7 +23,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.3);
-  
+
 }
 
 body {
