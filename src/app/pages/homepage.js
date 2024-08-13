@@ -20,12 +20,13 @@ const bottomEl = () => {
   return el;
 };
 
-const homepage = async (locationQuery, unitType) => {
+const reloadHomepage = async (locationQuery, unitType) => {
   const rawData = await getRawData(locationQuery);
   console.log(rawData);
   const bodyEl = document.querySelector('body');
+  bodyEl.textContent = '';
   appendChildren(bodyEl, topEl(rawData), bottomEl());
   changeSystem(unitType);
 };
 
-export default homepage;
+export default reloadHomepage;

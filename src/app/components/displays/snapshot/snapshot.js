@@ -31,32 +31,6 @@ const tempEl = (rawData) => {
   return el;
 };
 
-// clear-day
-// clear-night
-// cloudy
-// fog
-// hail
-// partly-cloudy-day
-// partly-cloudy-night
-// rain-snow-showers-day
-// rain-snow-showers-night
-// rain-snow
-// rain
-// showers-day
-// showers-night
-// sleet
-// snow-showers-day
-// snow-showers-night
-// snow
-// thunder-rain
-// thunder-showers-day
-// thunder-showers-night
-// thunder
-// wind
-// eaecf3 sorta white
-// 999dae lighter grey
-// FFC300 yellow
-// 4764cd blue
 const conditionsEl = (rawData) => {
   const el = snapshotAttr('div', 'conditions', rawData.currentConditions.conditions, '', rawData.currentConditions.conditions, '');
   el.children[0].setAttribute('class', `${rawData.currentConditions.icon}`);

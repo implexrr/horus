@@ -1,20 +1,20 @@
-import homepage from './pages/homepage';
+import reloadHomepage from './pages/homepage';
 import { getCurrentSystem } from './services/selectSystem';
 
-function clearContent() {
-  document.querySelector('body').textContent = '';
-}
+// function clearContent() {
+//   document.querySelector('body').textContent = '';
+// }
 
-async function reloadHomepage(e) {
+async function initiateReload(e) {
   e.preventDefault();
   const newData = document.querySelector('#location').value;
   const unitType = getCurrentSystem();
-  clearContent();
-  await homepage(newData, unitType);
-  document.querySelector('#weather-form').addEventListener('submit', reloadHomepage);
+  // clearContent();
+  await reloadHomepage(newData, unitType);
+  document.querySelector('#weather-form').addEventListener('submit', initiateReload);
 }
 
 export default async function initialLoad(data) {
-  await homepage(data, 'metric');
-  document.querySelector('#weather-form').addEventListener('submit', reloadHomepage);
+  await reloadHomepage(data, 'metric');
+  document.querySelector('#weather-form').addEventListener('submit', initiateReload);
 }
