@@ -8,7 +8,9 @@ function getCurrentSystem() {
 function displayData(unitType) {
   const elementsToFill = document.querySelectorAll('.data');
   for (let i = 0; i < elementsToFill.length; i += 1) {
-    elementsToFill[i].textContent = elementsToFill[i].dataset[unitType];
+    const magnitude = `${unitType}magnitude`;
+    const unit = `${unitType}unit`;
+    elementsToFill[i].textContent = `${elementsToFill[i].dataset[magnitude]}${elementsToFill[i].dataset[unit]}`;
   }
 }
 

@@ -1,7 +1,13 @@
 import synthesizeElement from '../utils/synthesizeElement';
 
-const dataComponent = (divOrSpan) => {
-  const el = synthesizeElement(divOrSpan, { class: 'data', 'data-metric': '', 'data-imperial': '' });
+const dataComponent = (divOrSpan, metricMagnitude, metricUnit, imperialMagnitude, imperialUnit) => {
+  const el = synthesizeElement(divOrSpan, {
+    class: 'data',
+    'data-metricmagnitude': metricMagnitude,
+    'data-metricunit': metricUnit,
+    'data-imperialmagnitude': imperialMagnitude,
+    'data-imperialunit': imperialUnit,
+  });
   return el;
 };
 
