@@ -17,32 +17,26 @@
 
 html {
   height: 100%;
-  background: url(../images/backgrounds/05-Mid-Afternoon.png) no-repeat center center fixed;
+  background: url(../images/backgrounds/07-Early-Evening.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.3);
-
+  box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0);
 }
 
 body {
   min-height: 100%;
   min-width: fit-content;
   width: 100%;
-  border: solid red;
   display: grid;
   grid-template-rows: min-content 1fr;
   color: white;
-  text-shadow:
+  /* text-shadow:
       0.04em 0 black,
       0 0.04em black,
       -0.04em 0 black,
-      0 -0.04em black;
-}
-
-body > * {
-  border: solid black;
+      0 -0.04em black; */
 }
 
 #top {
@@ -60,6 +54,7 @@ body > * {
   grid-area: header;
   padding: 3px;
   text-align: center;
+  box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.5);
 }
 
 #snapshot-container {
@@ -67,6 +62,14 @@ body > * {
   padding: 3px;
   display: flex;
   justify-content: start;
+}
+
+#snapshot {
+  box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.5);
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
 }
 
 #current-conditions-container {
@@ -86,6 +89,7 @@ body > * {
 #forecast-options {
   padding: 3px;
   text-align: center;
+  box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.5);
 }
 
 #forecast-container {
@@ -144,26 +148,16 @@ input + button::before {
   color: red;
  }
 
- /* icons */
-
-
+ /* snapshot icons */
 
 #snapshot > div {
   display: flex;
-  border: solid 1px red;
 }
 
 #snapshot .conditions {
   display: block;
-  border: solid blue;
 }
 
-#snapshot .conditions div.icon {
-  height: 15px;
-  width: 15px;
-  background: url(../images/snapshot/location.svg);
-  margin-right: 3px;
-}
 
 #snapshot .resolvedAddress div.icon {
   height: 15px;
@@ -183,5 +177,160 @@ input + button::before {
   height: 15px;
   width: 15px;
   background: url(../images/snapshot/datetime.svg);
+  margin-right: 3px;
+}
+
+/* weather icons */
+.clear-day {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/clear-day.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.clear-night {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/clear-night.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.cloudy {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/cloudy.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.fog {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/fog.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.hail {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/hail.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.partly-cloudy-day {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/partly-cloudy-day.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.partly-cloudy-night {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/partly-cloudy-night.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.rain-snow-showers-day {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/rain-snow-showers-day.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.rain-snow-showers-night {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/rain-snow-showers-night.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.rain-snow {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/rain-snow.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.rain {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/rain.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.showers-day {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/showers-day.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.showers-night {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/showers-night.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.sleet {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/sleet.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.snow-showers-day {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/snow-showers-day.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.snow-showers-night {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/snow-showers-night.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.snow {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/snow.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.thunder-rain {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/thunder-rain.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.thunder-showers-day {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/thunder-showers-day.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.thunder-showers-night {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/thunder-showers-night.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.thunder {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/thunder.svg) no-repeat center;
+  margin-right: 3px;
+}
+
+.wind {
+  height: 30px;
+  width: 100%;
+  background: url(../images/weatherIcons/wind.svg) no-repeat center;
   margin-right: 3px;
 }

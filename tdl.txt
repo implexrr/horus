@@ -1,4 +1,3 @@
 - visualcrossing doesn't pull correct time, 
   - need to think of a way to pull current time and change it based on visual crossing's calculated time zone
-- need icons for snapshot/cur/cards
-  - need way to sync icon with currentConditions
+- need to add error handling (invalid location, couldnt find location, bad server response, couldn't send request, etc)
