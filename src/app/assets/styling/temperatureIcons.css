@@ -1,0 +1,27 @@
+.hot {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/hot.svg);
+  margin-right: 3px;
+}
+
+.warm {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/warm.svg);
+  margin-right: 3px;
+}
+
+.cold {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/cold.svg);
+  margin-right: 3px;
+}
+
+.freezing {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/freezing.svg);
+  margin-right: 3px;
+}
