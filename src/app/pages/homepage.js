@@ -7,6 +7,7 @@ import forecastOptionsEl from '../components/displayOptions/forecastOptions';
 import appendChildren from '../utils/appendChildren';
 import getRawData from '../services/weatherData';
 import { changeSystem } from '../services/selectSystem';
+import changeBackground from '../services/changeBackground';
 
 const topEl = (rawData) => {
   const el = synthesizeElement('div', { id: 'top' });
@@ -25,6 +26,7 @@ const reloadHomepage = async (locationQuery, unitType) => {
   console.log(rawData);
   const bodyEl = document.querySelector('body');
   bodyEl.textContent = '';
+  changeBackground(rawData);
   appendChildren(bodyEl, topEl(rawData), bottomEl());
   changeSystem(unitType);
 };

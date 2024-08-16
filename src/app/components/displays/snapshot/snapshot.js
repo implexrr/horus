@@ -56,7 +56,12 @@ const resolvedAddressEl = (rawData) => {
 };
 
 const dateEl = (rawData) => {
-  const { year, month, day, weekday } = getFormattedCurDate(rawData.tzoffset);
+  const {
+    year,
+    month,
+    day,
+    weekday,
+  } = getFormattedCurDate(rawData.tzoffset);
   const el = snapshotAttr('div', 'date', `${weekday}, ${month} ${day} ${year}`, '', `${weekday}, ${month} ${day} ${year}`, '');
   return el;
 };
