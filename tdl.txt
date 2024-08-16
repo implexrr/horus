@@ -1,4 +1,6 @@
 - visualcrossing doesn't pull correct time, 
   - need to think of a way to pull current time and change it based on visual crossing's calculated time zone
+  - live date-time object with clock?
 - need to add error handling (invalid location, couldnt find location, bad server response, couldn't send request, couldn't load, try again, etc)
 - add fetching animation
+- add reload button (eye of horus)

@@ -2,6 +2,8 @@ import synthesizeElement from '../../../utils/synthesizeElement';
 import weatherFormEl from '../../forms/weatherForm';
 import appendChildren from '../../../utils/appendChildren';
 import { containerComponent, dataComponent, iconComponent } from '../../helperComponents';
+import getFormattedCurTime from '../../../utils/datetime/formatTime';
+import getFormattedCurDate from '../../../utils/datetime/formatDate';
 
 const snapshotAttr = (
   divOrSpan,
@@ -24,6 +26,7 @@ const snapshotAttr = (
   return attrContainerEl;
 };
 
+// TODO: Move to new file
 function setTempIconString(metricTemp) {
   let temp;
   if (metricTemp < 0) {
@@ -38,7 +41,6 @@ function setTempIconString(metricTemp) {
   return temp;
 }
 
-// TODO: Dynamically render temp icon
 const tempEl = (rawData) => {
   const metricTemp = rawData.currentConditions.temp;
   const imperialTemp = ((metricTemp * 1.8) + 32).toFixed(1);
@@ -48,15 +50,20 @@ const tempEl = (rawData) => {
   return el;
 };
 
-// TODO: Change associated svg
 const resolvedAddressEl = (rawData) => {
   const el = snapshotAttr('div', 'resolvedAddress', rawData.resolvedAddress, '', rawData.resolvedAddress, '');
   return el;
 };
 
-// TODO: replace with real datetime obj
-const datetimeEl = (rawData) => {
-  const el = snapshotAttr('div', 'datetime', rawData.currentConditions.datetime, '', rawData.currentConditions.datetime, '');
+const dateEl = (rawData) => {
+  const { year, month, day, weekday } = getFormattedCurDate(rawData.tzoffset);
+  const el = snapshotAttr('div', 'date', `${weekday}, ${month} ${day} ${year}`, '', `${weekday}, ${month} ${day} ${year}`, '');
+  return el;
+};
+
+const timeEl = (rawData) => {
+  const { hour, minute, second } = getFormattedCurTime(rawData.tzoffset);
+  const el = snapshotAttr('div', 'time', `${hour}:${minute}:${second}`, '', `${hour}:${minute}:${second}`, '');
   return el;
 };
 
@@ -70,9 +77,10 @@ const snapshotEl = (rawData) => {
   const el = synthesizeElement('div', { id: 'snapshot' });
   appendChildren(
     el,
+    dateEl(rawData),
     conditionsEl(rawData),
     resolvedAddressEl(rawData),
-    datetimeEl(rawData),
+    timeEl(rawData),
     tempEl(rawData),
     weatherFormEl(),
   );

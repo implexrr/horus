@@ -168,9 +168,9 @@ input + button::before {
 }
 
 
-#snapshot .datetime div.icon {
+#snapshot .time div.icon {
   height: 15px;
   width: 15px;
-  background: url(../images/snapshot/datetime.svg);
+  background: url(../images/snapshot/time.svg);
   margin-right: 3px;
 }
