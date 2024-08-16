@@ -47,7 +47,7 @@ function calculateCurPhase(curTime, sunrise, sunset) {
   return lengthOfDay; // just in case
 }
 
-export default function changeBackground(rawData) {
+export default function changeBackground(rawData, firstLoad) {
   const UTCTime = new Date();
   const currentTime = convertUTCDateTime(UTCTime, rawData.tzoffset);
   const htmlEl = document.querySelector('html');
@@ -60,4 +60,5 @@ export default function changeBackground(rawData) {
   const current = convertToSeconds(currentTime.hour, currentTime.minute, currentTime.second);
   const currentPhase = calculateCurPhase(current, sunrise, sunset);
   htmlEl.setAttribute('class', `phase${currentPhase}`);
+  if (!(firstLoad)) { htmlEl.classList.add('change-background-transition'); }
 }

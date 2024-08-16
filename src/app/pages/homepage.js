@@ -21,12 +21,12 @@ const bottomEl = () => {
   return el;
 };
 
-const reloadHomepage = async (locationQuery, unitType) => {
+const reloadHomepage = async (locationQuery, unitType, firstLoad) => {
   const rawData = await getRawData(locationQuery);
   console.log(rawData);
   const bodyEl = document.querySelector('body');
   bodyEl.textContent = '';
-  changeBackground(rawData);
+  changeBackground(rawData, firstLoad);
   appendChildren(bodyEl, topEl(rawData), bottomEl());
   changeSystem(unitType);
 };

@@ -2,7 +2,7 @@ import './app/assets/styling/main.css';
 import initialLoad from './app/app';
 import changeBackground from './app/services/changeBackground';
 
-initialLoad('Hamilton, Ontario');
+initialLoad('London, UK');
 
 // const rawData = {
 //   sunrise: '06:00:00',

@@ -10,11 +10,11 @@ async function initiateReload(e) {
   const newData = document.querySelector('#location').value;
   const unitType = getCurrentSystem();
   // clearContent();
-  await reloadHomepage(newData, unitType);
+  await reloadHomepage(newData, unitType, false);
   document.querySelector('#weather-form').addEventListener('submit', initiateReload);
 }
 
 export default async function initialLoad(data) {
-  await reloadHomepage(data, 'metric');
+  await reloadHomepage(data, 'metric', true);
   document.querySelector('#weather-form').addEventListener('submit', initiateReload);
 }
