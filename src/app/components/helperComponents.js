@@ -1,7 +1,8 @@
 import synthesizeElement from '../utils/synthesizeElement';
 
-const dataComponent = (divOrSpan, metricMagnitude, metricUnit, imperialMagnitude, imperialUnit) => {
-  const el = synthesizeElement(divOrSpan, {
+// Create component containing imperial/metric magnitudes/units hidden within HTML data attributes
+const dataComponent = (elType, metricMagnitude, metricUnit, imperialMagnitude, imperialUnit) => {
+  const el = synthesizeElement(elType, {
     class: 'data',
     'data-metricmagnitude': metricMagnitude,
     'data-metricunit': metricUnit,
@@ -11,13 +12,15 @@ const dataComponent = (divOrSpan, metricMagnitude, metricUnit, imperialMagnitude
   return el;
 };
 
-const iconComponent = (divOrSpan) => {
-  const el = synthesizeElement(divOrSpan, { class: 'icon' });
+// Create icon component
+const iconComponent = (elType) => {
+  const el = synthesizeElement(elType, { class: 'icon' });
   return el;
 };
 
-const containerComponent = (dataAttr) => {
-  const el = synthesizeElement('div', { class: dataAttr });
+// Create container component to store paired data/icon components
+const containerComponent = (dataAttrName) => {
+  const el = synthesizeElement('div', { class: dataAttrName });
   return el;
 };
 

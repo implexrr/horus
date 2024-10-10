@@ -5,15 +5,16 @@ import { containerComponent, dataComponent, iconComponent } from '../../helperCo
 import getFormattedCurTime from '../../../utils/datetime/formatTime';
 import getFormattedCurDate from '../../../utils/datetime/formatDate';
 
+// Helper function for creating snapshot attributes
 const snapshotAttr = (
   divOrSpan,
-  dataAttr,
+  dataAttrName,
   metricMagnitude,
   metricUnit,
   imperialMagnitude,
   imperialUnit,
 ) => {
-  const attrContainerEl = containerComponent(dataAttr);
+  const attrContainerEl = containerComponent(dataAttrName);
   const iconEl = iconComponent(divOrSpan);
   const dataEl = dataComponent(
     divOrSpan,
@@ -26,7 +27,7 @@ const snapshotAttr = (
   return attrContainerEl;
 };
 
-// TODO: Move to new file
+// TODO: Move to new file (below)
 function setTempIconString(metricTemp) {
   let temp;
   if (metricTemp < 0) {
@@ -40,7 +41,9 @@ function setTempIconString(metricTemp) {
   }
   return temp;
 }
+// TODO: Move to new file (above)
 
+// Create component for temperature icon/data
 const tempEl = (rawData) => {
   const metricTemp = rawData.currentConditions.temp;
   const imperialTemp = ((metricTemp * 1.8) + 32).toFixed(1);
@@ -50,11 +53,13 @@ const tempEl = (rawData) => {
   return el;
 };
 
+// Create component for resolved address icon/data
 const resolvedAddressEl = (rawData) => {
   const el = snapshotAttr('div', 'resolvedAddress', rawData.resolvedAddress, '', rawData.resolvedAddress, '');
   return el;
 };
 
+// Create component for date icon/data
 const dateEl = (rawData) => {
   const {
     year,
@@ -66,18 +71,21 @@ const dateEl = (rawData) => {
   return el;
 };
 
+// Create component for time icon/data
 const timeEl = (rawData) => {
   const { hour, minute, second } = getFormattedCurTime(rawData.tzoffset);
   const el = snapshotAttr('div', 'time', `${hour}:${minute}:${second}`, '', `${hour}:${minute}:${second}`, '');
   return el;
 };
 
+// Create component for (current) conditions icon/data
 const conditionsEl = (rawData) => {
   const el = snapshotAttr('div', 'conditions', rawData.currentConditions.conditions, '', rawData.currentConditions.conditions, '');
   el.children[0].classList.add(`${rawData.currentConditions.icon}`);
   return el;
 };
 
+// Create snapshot card component
 const snapshotEl = (rawData) => {
   const el = synthesizeElement('div', { id: 'snapshot' });
   appendChildren(

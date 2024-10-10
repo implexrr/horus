@@ -1,6 +1,7 @@
 /* eslint-disable object-curly-newline */
 import convertUTCDateTime from './convertUTCDateTime';
 
+// Define months object for later formatting
 const months = {
   0: 'January',
   1: 'February',
@@ -16,6 +17,7 @@ const months = {
   11: 'December',
 };
 
+// Define weekdays object for later formatting
 const weekdays = {
   0: 'Sunday',
   1: 'Monday',
@@ -26,6 +28,7 @@ const weekdays = {
   6: 'Saturday',
 };
 
+// Get current (unformatted) date object according to given timezone
 function getCurDate(tzoffset) {
   const UTCdatetime = new Date();
   const convertedDateTime = convertUTCDateTime(UTCdatetime, tzoffset);
@@ -33,6 +36,7 @@ function getCurDate(tzoffset) {
   return { year, month, day, weekday };
 }
 
+// Format date object
 function formatDate(dateObj) {
   // eslint-disable-next-line prefer-const
   let { year, month, day, weekday } = dateObj;
@@ -41,6 +45,7 @@ function formatDate(dateObj) {
   return { year, month, day, weekday };
 }
 
+// Produce formatted date object according to given timezone
 export default function getFormattedCurDate(tzoffset) {
   const unformattedCurDate = getCurDate(tzoffset);
   const formattedCurDate = formatDate(unformattedCurDate);

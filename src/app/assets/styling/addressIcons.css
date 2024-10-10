@@ -1,0 +1,6 @@
+#snapshot .resolvedAddress div.icon {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/location.svg);
+  margin-right: 3px;
+}

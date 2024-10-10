@@ -13,6 +13,7 @@ const searchBoxEl = () => {
   return el;
 };
 
+// Create weather form component containing search box and button for user queries
 const weatherFormEl = () => {
   const el = synthesizeElement('form', { id: 'weather-form' });
   appendChildren(el, searchBoxEl(), buttonEl());

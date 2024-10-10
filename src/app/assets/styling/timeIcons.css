@@ -1,0 +1,6 @@
+#snapshot .time div.icon {
+  height: 15px;
+  width: 15px;
+  background: url(../images/snapshot/time.svg);
+  margin-right: 3px;
+}
