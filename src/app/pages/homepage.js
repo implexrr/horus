@@ -32,6 +32,7 @@ const bottomEl = () => {
 const homepage = async (locationQuery, measurementSystem, isFirstLoad) => {
   // Pull raw JSON data according to location query
   const rawData = await getRawData(locationQuery);
+  console.log(rawData);
 
   // Reset homepage content
   const bodyEl = document.querySelector('body');

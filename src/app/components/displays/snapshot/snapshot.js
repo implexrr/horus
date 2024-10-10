@@ -43,6 +43,18 @@ function setTempIconString(metricTemp) {
 }
 // TODO: Move to new file (above)
 
+// Create component for feels like value
+const feelsLikeEl = (rawData) => {
+  const metricFeelsTemp = rawData.currentConditions.feelslike;
+  const imperialFeelsTemp = ((metricFeelsTemp * 1.8) + 32).toFixed(1);
+  const el = document.createElement('span');
+  const elData = dataComponent('span', metricFeelsTemp, ' °C)', imperialFeelsTemp, ' °F)');
+  const elDataPrefix = document.createElement('span');
+  elDataPrefix.textContent = '\u00A0(Feels like: ';
+  appendChildren(el, elDataPrefix, elData);
+  return el;
+};
+
 // Create component for temperature icon/data
 const tempEl = (rawData) => {
   const metricTemp = rawData.currentConditions.temp;
@@ -50,6 +62,7 @@ const tempEl = (rawData) => {
   const el = snapshotAttr('div', 'temp', metricTemp, ' °C', imperialTemp, ' °F');
   const iconStr = setTempIconString(metricTemp);
   el.children[0].classList.add(iconStr);
+  el.appendChild(feelsLikeEl(rawData));
   return el;
 };
 
