@@ -1,6 +1,25 @@
 import synthesizeElement from '../../../utils/synthesizeElement';
+import { dataComponent, descriptionComponent, containerComponent } from '../../helperComponents';
 
-// Create component for time icon/data
+// Create helper fxn(s)
+
+// Create component for sunrise description/data
+
+// Create component for sunset description/data
+
+// Create component for humidity description/data
+
+// Create component for visibility description/data
+
+// Create component for winddir description/data
+
+// Create component for windspeed description/data
+
+// Create component for precip description/data
+
+// Create component for precipprob description/data
+
+// Create component for preciptype description/data
 
 // Create current conditions card component
 const currentConditionsEl = (rawData) => {
@@ -19,16 +38,6 @@ export default currentConditionsEl;
   <span class="icon">XX_XX</span>
   <span class="title">sunset:</span>
   <span class="data">20:41</span>
-</div>
-<div class="temp">
-  <span class="icon">XX_XX</span>
-  <span class="title">temperature:</span>
-  <span class="data switchable" data-metric="31°C" data-imperial="87.8°F"></span>
-</div>
-<div class="feelslike">
-  <span class="icon">XX_XX</span>
-  <span class="title">Feels like: </span>
-  <span class="data switchable" data-metric="29°C" data-imperial="84.2°F"></span>
 </div>
 <div class="humidity">
   <span class="icon">XX_XX</span>

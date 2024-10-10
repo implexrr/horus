@@ -18,10 +18,19 @@ const iconComponent = (elType) => {
   return el;
 };
 
+// Create description component
+const descriptionComponent = (elType, description) => {
+  const el = synthesizeElement(elType, { class: 'icon' });
+  el.textContent = description;
+  return el;
+};
+
 // Create container component to store paired data/icon components
 const containerComponent = (dataAttrName) => {
   const el = synthesizeElement('div', { class: dataAttrName });
   return el;
 };
 
-export { dataComponent, iconComponent, containerComponent };
+export {
+  dataComponent, iconComponent, descriptionComponent, containerComponent,
+};
