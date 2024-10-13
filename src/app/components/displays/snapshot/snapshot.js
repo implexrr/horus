@@ -4,10 +4,7 @@ import appendChildren from '../../../utils/appendChildren';
 import { containerComponent, dataComponent, iconComponent } from '../../helperComponents';
 import getFormattedCurTime from '../../../utils/datetime/formatTime';
 import getFormattedCurDate from '../../../utils/datetime/formatDate';
-
-const COLD = 0;
-const WARM = 15;
-const HOT = 30;
+import { setTempIconString } from '../../../utils/dynamicSymbols';
 
 // Helper function for creating snapshot attributes
 const snapshotAttr = (
@@ -30,22 +27,6 @@ const snapshotAttr = (
   appendChildren(containerEl, iconEl, dataEl);
   return containerEl;
 };
-
-// TODO: Move to new file (below)
-function setTempIconString(metricTemp) {
-  let temp;
-  if (metricTemp < COLD) {
-    temp = 'freezing';
-  } else if (metricTemp >= COLD && metricTemp < WARM) {
-    temp = 'cold';
-  } else if (metricTemp >= WARM && metricTemp < HOT) {
-    temp = 'warm';
-  } else {
-    temp = 'hot';
-  }
-  return temp;
-}
-// TODO: Move to new file (above)
 
 // Create component for feels like value
 const feelsLikeEl = (rawData) => {
