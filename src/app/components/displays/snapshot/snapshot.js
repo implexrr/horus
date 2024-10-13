@@ -5,6 +5,10 @@ import { containerComponent, dataComponent, iconComponent } from '../../helperCo
 import getFormattedCurTime from '../../../utils/datetime/formatTime';
 import getFormattedCurDate from '../../../utils/datetime/formatDate';
 
+const COLD = 0;
+const WARM = 15;
+const HOT = 30;
+
 // Helper function for creating snapshot attributes
 const snapshotAttr = (
   elType,
@@ -30,11 +34,11 @@ const snapshotAttr = (
 // TODO: Move to new file (below)
 function setTempIconString(metricTemp) {
   let temp;
-  if (metricTemp < 0) {
+  if (metricTemp < COLD) {
     temp = 'freezing';
-  } else if (metricTemp >= 0 && metricTemp < 15) {
+  } else if (metricTemp >= COLD && metricTemp < WARM) {
     temp = 'cold';
-  } else if (metricTemp >= 15 && metricTemp < 30) {
+  } else if (metricTemp >= WARM && metricTemp < HOT) {
     temp = 'warm';
   } else {
     temp = 'hot';
