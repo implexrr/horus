@@ -7,24 +7,24 @@ import getFormattedCurDate from '../../../utils/datetime/formatDate';
 
 // Helper function for creating snapshot attributes
 const snapshotAttr = (
-  divOrSpan,
+  elType,
   dataAttrName,
   metricMagnitude,
   metricUnit,
   imperialMagnitude,
   imperialUnit,
 ) => {
-  const attrContainerEl = containerComponent(dataAttrName);
-  const iconEl = iconComponent(divOrSpan);
+  const containerEl = containerComponent(dataAttrName);
+  const iconEl = iconComponent(elType);
   const dataEl = dataComponent(
-    divOrSpan,
+    elType,
     metricMagnitude,
     metricUnit,
     imperialMagnitude,
     imperialUnit,
   );
-  appendChildren(attrContainerEl, iconEl, dataEl);
-  return attrContainerEl;
+  appendChildren(containerEl, iconEl, dataEl);
+  return containerEl;
 };
 
 // TODO: Move to new file (below)

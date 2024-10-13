@@ -20,7 +20,7 @@ const iconComponent = (elType) => {
 
 // Create description component
 const descriptionComponent = (elType, description) => {
-  const el = synthesizeElement(elType, { class: 'icon' });
+  const el = synthesizeElement(elType, { class: 'description' });
   el.textContent = description;
   return el;
 };

@@ -16,7 +16,7 @@ const topEl = (rawData) => {
     el,
     measurementSystemOptionsEl(),
     snapshotContainerEl(rawData),
-    currentConditionsContainerEl(),
+    currentConditionsContainerEl(rawData.currentConditions),
   );
   return el;
 };
