@@ -56,6 +56,7 @@ const visibilityEl = (currentConditions) => {
   return el;
 };
 
+//----------------------------------------------------------------
 // Create component for winddir description/data
 const winddirEl = (currentConditions) => {
   const winddir = setWindDirection(currentConditions.winddir);
@@ -70,7 +71,9 @@ const windspeedEl = (currentConditions) => {
   const el = currentConditionsAttr('div', 'windspeed', metricWindspeed, 'kph', imperialWindspeed, 'mph', 'Wind Speed:\u00A0');
   return el;
 };
+//----------------------------------------------------------------
 
+//----------------------------------------------------------------
 // Create component for precip description/data
 const precipEl = (currentConditions) => {
   const metricPrecip = currentConditions.precip;
@@ -90,6 +93,7 @@ const preciptypeEl = (currentConditions) => {
   const el = currentConditionsAttr('div', 'preciptype', currentConditions.preciptype, '', currentConditions.preciptype, '', 'Precipitation Type:\u00A0');
   return el;
 };
+//----------------------------------------------------------------
 
 // Create current conditions card component
 const currentConditionsEl = (currentConditions) => {
