@@ -56,43 +56,26 @@ const visibilityEl = (currentConditions) => {
   return el;
 };
 
-//----------------------------------------------------------------
-// Create component for winddir description/data
-const winddirEl = (currentConditions) => {
+// Create component for wind description/data
+const windEl = (currentConditions) => {
   const winddir = setWindDirection(currentConditions.winddir);
-  const el = currentConditionsAttr('div', 'winddir', winddir, '', winddir, '', 'Wind Direction:\u00A0');
-  return el;
-};
-
-// Create component for windspeed description/data
-const windspeedEl = (currentConditions) => {
   const metricWindspeed = currentConditions.windspeed;
   const imperialWindspeed = (metricWindspeed * KM_TO_MI_FACTOR).toFixed(1);
-  const el = currentConditionsAttr('div', 'windspeed', metricWindspeed, 'kph', imperialWindspeed, 'mph', 'Wind Speed:\u00A0');
+  const el = currentConditionsAttr('div', 'winddir', metricWindspeed, `kph${winddir}`, imperialWindspeed, `mph${winddir}`, 'Wind:\u00A0');
   return el;
 };
-//----------------------------------------------------------------
 
 //----------------------------------------------------------------
 // Create component for precip description/data
 const precipEl = (currentConditions) => {
   const metricPrecip = currentConditions.precip;
   const imperialPrecip = (metricPrecip * MM_TO_IN_FACTOR).toFixed(3);
-  const el = currentConditionsAttr('div', 'precip', metricPrecip, 'mm', imperialPrecip, 'in', 'Precipitation:\u00A0');
+  const { preciptype } = currentConditions;
+  const { precipprob } = currentConditions;
+  const el = currentConditionsAttr('div', 'precip', `${preciptype} (${precipprob}%), ${metricPrecip}`, 'mm', `${preciptype} (${precipprob}%), ${imperialPrecip}`, 'in', 'Precipitation:\u00A0');
   return el;
 };
 
-// Create component for precipprob description/data
-const precipprobEl = (currentConditions) => {
-  const el = currentConditionsAttr('div', 'precipprob', currentConditions.precipprob, '%', currentConditions.precipprob, '%', 'Precipitation Probability:\u00A0');
-  return el;
-};
-
-// Create component for preciptype description/data
-const preciptypeEl = (currentConditions) => {
-  const el = currentConditionsAttr('div', 'preciptype', currentConditions.preciptype, '', currentConditions.preciptype, '', 'Precipitation Type:\u00A0');
-  return el;
-};
 //----------------------------------------------------------------
 
 // Create current conditions card component
@@ -104,11 +87,8 @@ const currentConditionsEl = (currentConditions) => {
     sunsetEl(currentConditions),
     humidityEl(currentConditions),
     visibilityEl(currentConditions),
-    winddirEl(currentConditions),
-    windspeedEl(currentConditions),
+    windEl(currentConditions),
     precipEl(currentConditions),
-    precipprobEl(currentConditions),
-    preciptypeEl(currentConditions),
   );
   return el;
 };
