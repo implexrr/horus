@@ -65,18 +65,15 @@ const windEl = (currentConditions) => {
   return el;
 };
 
-//----------------------------------------------------------------
 // Create component for precip description/data
 const precipEl = (currentConditions) => {
   const metricPrecip = currentConditions.precip;
-  const imperialPrecip = (metricPrecip * MM_TO_IN_FACTOR).toFixed(3);
+  const imperialPrecip = (metricPrecip * MM_TO_IN_FACTOR).toFixed(2);
   const { preciptype } = currentConditions;
   const { precipprob } = currentConditions;
-  const el = currentConditionsAttr('div', 'precip', `${preciptype} (${precipprob}%), ${metricPrecip}`, 'mm', `${preciptype} (${precipprob}%), ${imperialPrecip}`, 'in', 'Precipitation:\u00A0');
+  const el = currentConditionsAttr('div', 'precip', `${precipprob}% chance of ${preciptype}, ${metricPrecip}`, 'mm', `${precipprob}% chance of ${preciptype}, ${imperialPrecip}`, 'in', 'Precipitation:\u00A0');
   return el;
 };
-
-//----------------------------------------------------------------
 
 // Create current conditions card component
 const currentConditionsEl = (currentConditions) => {
