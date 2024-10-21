@@ -131,10 +131,6 @@ input + button::before {
   background-color: rgba(58, 157, 86, 0.5);
  }
 
- .invisible {
-  display: none;
- }
-
  .system-selected {
   color: red;
  }
@@ -151,6 +147,10 @@ input + button::before {
 #current-conditions-card > div {
   display: flex;
 }
+
+.invisible {
+  display: none;
+ }
 /* ---------------------------------------------------- */
 /* ---------------------- MISC ------------------------ */
 /* ---------------------------------------------------- */
