@@ -1,5 +1,5 @@
 import synthesizeElement from '../../utils/synthesizeElement';
-import snapshotCardEl from '../cards/snapshot/snapshotCard';
+import snapshotCardEl from '../cards/snapshotCard';
 
 // Create container component for snapshot card component
 const snapshotContainerEl = (rawData) => {

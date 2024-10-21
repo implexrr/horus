@@ -1,6 +1,6 @@
 import appendChildren from '../../utils/appendChildren';
 import synthesizeElement from '../../utils/synthesizeElement';
-import currentConditionsCardEl from '../cards/currentConditions/currentConditionsCard';
+import currentConditionsCardEl from '../cards/currentConditionsCard';
 
 // Create container component for current conditions card component
 const currentConditionsContainerEl = (currentConditions) => {

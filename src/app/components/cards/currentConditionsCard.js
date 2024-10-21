@@ -1,7 +1,7 @@
-import appendChildren from '../../../utils/appendChildren';
-import synthesizeElement from '../../../utils/synthesizeElement';
-import { dataComponent, descriptionComponent, containerComponent } from '../../helperComponents';
-import { setWindDirection } from '../../../utils/dynamicSymbols';
+import appendChildren from '../../utils/appendChildren';
+import synthesizeElement from '../../utils/synthesizeElement';
+import { dataComponent, descriptionComponent, containerComponent } from '../helperComponents';
+import { setWindDirection } from '../../utils/dynamicSymbols';
 
 const KM_TO_MI_FACTOR = 0.621371;
 const MM_TO_IN_FACTOR = 0.03973701;
