@@ -1,4 +1,4 @@
-#snapshot .time div.icon {
+#snapshot-card .time div.icon {
   height: 15px;
   width: 15px;
   background: url(../images/snapshot/time.svg);

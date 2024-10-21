@@ -84,8 +84,8 @@ const conditionsEl = (rawData) => {
 };
 
 // Create snapshot card component
-const snapshotEl = (rawData) => {
-  const el = synthesizeElement('div', { id: 'snapshot' });
+const snapshotCardEl = (rawData) => {
+  const el = synthesizeElement('div', { id: 'snapshot-card' });
   appendChildren(
     el,
     dateEl(rawData),
@@ -98,4 +98,4 @@ const snapshotEl = (rawData) => {
   return el;
 };
 
-export default snapshotEl;
+export default snapshotCardEl;

@@ -34,7 +34,7 @@
   justify-content: start;
 }
 
-#snapshot {
+#snapshot-card {
   box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.5);
   padding-top: 5px;
   padding-right: 5px;
@@ -49,7 +49,7 @@
   justify-content: end;
 }
 
-#current-conditions {
+#current-conditions-card {
   box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.5);
   padding-top: 5px;
   padding-right: 5px;
@@ -140,15 +140,15 @@ input + button::before {
  }
  /* snapshot icons */
 
- #snapshot > div {
+ #snapshot-card > div {
   display: flex;
 }
 
-#snapshot .conditions {
+#snapshot-card .conditions {
   display: block;
 }
 
-#current-conditions > div {
+#current-conditions-card > div {
   display: flex;
 }
 /* ---------------------------------------------------- */

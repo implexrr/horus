@@ -76,8 +76,8 @@ const precipEl = (currentConditions) => {
 };
 
 // Create current conditions card component
-const currentConditionsEl = (currentConditions) => {
-  const el = synthesizeElement('div', { id: 'current-conditions' });
+const currentConditionsCardEl = (currentConditions) => {
+  const el = synthesizeElement('div', { id: 'current-conditions-card' });
   appendChildren(
     el,
     sunriseEl(currentConditions),
@@ -90,4 +90,4 @@ const currentConditionsEl = (currentConditions) => {
   return el;
 };
 
-export default currentConditionsEl;
+export default currentConditionsCardEl;
