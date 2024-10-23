@@ -4,9 +4,9 @@ import dailyContainerEl from './dailyContainer';
 import hourlyContainerEl from './hourlyContainer';
 
 // Create container component for forecast card component
-const forecastContainerEl = () => {
+const forecastContainerEl = (rawData) => {
   const el = synthesizeElement('div', { id: 'forecast-container' });
-  appendChildren(el, dailyContainerEl(), hourlyContainerEl());
+  appendChildren(el, dailyContainerEl(rawData), hourlyContainerEl());
   return el;
 };
 

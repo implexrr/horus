@@ -22,9 +22,9 @@ const topEl = (rawData) => {
 };
 
 // Use raw JSON data to render bottom half of homepage
-const bottomEl = () => {
+const bottomEl = (rawData) => {
   const el = synthesizeElement('div', { id: 'bottom' });
-  appendChildren(el, forecastOptionsEl(), forecastContainerEl());
+  appendChildren(el, forecastOptionsEl(), forecastContainerEl(rawData));
   return el;
 };
 
@@ -42,7 +42,7 @@ const homepage = async (locationQuery, measurementSystem, isFirstLoad) => {
   changeBackground(rawData, isFirstLoad);
 
   // Append top and bottom half of homepage to body
-  appendChildren(bodyEl, topEl(rawData), bottomEl());
+  appendChildren(bodyEl, topEl(rawData), bottomEl(rawData));
 
   // Render data according to chosen system of measurement
   changeSystem(measurementSystem);

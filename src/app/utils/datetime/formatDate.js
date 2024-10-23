@@ -1,6 +1,8 @@
 /* eslint-disable object-curly-newline */
 import convertUTCDateTime from './convertUTCDateTime';
 
+const FORMAT_OFFSET = 1; // Since external API counts January as month 1 instead of month 0
+
 // Define months object for later formatting
 const months = {
   0: 'January',
@@ -45,9 +47,19 @@ function formatDate(dateObj) {
   return { year, month, day, weekday };
 }
 
+// Return a date object given the date in str form
+function formatDateString(dateStr) {
+  const year = dateStr.slice(0, 4);
+  const month = months[dateStr.slice(5, 7) - FORMAT_OFFSET];
+  const day = dateStr.slice(8);
+  return { year, month, day };
+}
+
 // Produce formatted date object according to given timezone
-export default function getFormattedCurDate(tzoffset) {
+function getFormattedCurDate(tzoffset) {
   const unformattedCurDate = getCurDate(tzoffset);
   const formattedCurDate = formatDate(unformattedCurDate);
   return formattedCurDate;
 }
+
+export { formatDateString, getFormattedCurDate };

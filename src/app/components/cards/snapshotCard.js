@@ -3,7 +3,7 @@ import weatherFormEl from '../forms/weatherForm';
 import appendChildren from '../../utils/appendChildren';
 import { containerComponent, dataComponent, iconComponent } from '../helperComponents';
 import getFormattedCurTime from '../../utils/datetime/formatTime';
-import getFormattedCurDate from '../../utils/datetime/formatDate';
+import { getFormattedCurDate } from '../../utils/datetime/formatDate';
 import { setTempIconString } from '../../utils/dynamicSymbols';
 
 // Helper function for creating snapshot attributes
