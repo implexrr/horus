@@ -4,6 +4,7 @@ import appendChildren from '../../utils/appendChildren';
 import { setTempIconString } from '../../utils/dynamicSymbols';
 import { formatDateString } from '../../utils/datetime/formatDate';
 
+// Helper function for creating daily forecast components
 const dailyAttr = (
   elType,
   dataAttrName,
@@ -25,18 +26,21 @@ const dailyAttr = (
   return containerEl;
 };
 
+// Create component for date
 const dateEl = (dayData) => {
   const date = formatDateString(dayData.datetime);
   const el = dailyAttr('div', 'date', `${date.month} ${date.day}`, '', `${date.month} ${date.day}`, '');
   return el;
 };
 
+// Create component for conditions
 const conditionsEl = (dayData) => {
   const el = dailyAttr('div', 'conditions', dayData.conditions, '', dayData.conditions, '');
   el.children[0].classList.add(`${dayData.icon}`);
   return el;
 };
 
+// Create component for max temp
 const tempMinEl = (dayData) => {
   const metricTemp = dayData.tempmin;
   const imperialTemp = ((metricTemp * 1.8) + 32).toFixed(1);
@@ -46,6 +50,7 @@ const tempMinEl = (dayData) => {
   return el;
 };
 
+// Create component for min temp
 const tempMaxEl = (dayData) => {
   const metricTemp = dayData.tempmax;
   const imperialTemp = ((metricTemp * 1.8) + 32).toFixed(1);
@@ -55,7 +60,8 @@ const tempMaxEl = (dayData) => {
   return el;
 };
 
-const forecastCardDaily = (dayData) => {
+// Create component for daily forecast card
+const forecastCardDailyEl = (dayData) => {
   const el = synthesizeElement('div', { class: 'forecast-card daily' });
   appendChildren(
     el,
@@ -67,4 +73,4 @@ const forecastCardDaily = (dayData) => {
   return el;
 };
 
-export default forecastCardDaily;
+export default forecastCardDailyEl;
