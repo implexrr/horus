@@ -16,14 +16,14 @@ function displayData(measurementSystem) {
   }
 }
 
-// Helper function for changeSystem
+// Helper function for changeMeasurementSystem
 function selectMeasurementSystem(oldSys, newSys) {
   document.querySelector(`button.${oldSys}`).classList.remove('system-selected');
   document.querySelector(`button.${newSys}`).classList.add('system-selected');
 }
 
 // Change measurement system, then display new data
-function changeSystem(measurementSystem) {
+function changeMeasurementSystem(measurementSystem) {
   if (measurementSystem === 'metric') {
     selectMeasurementSystem('imperial', measurementSystem);
   } else {
@@ -32,4 +32,4 @@ function changeSystem(measurementSystem) {
   displayData(measurementSystem);
 }
 
-export { getCurrentSystem, changeSystem };
+export { getCurrentSystem, changeMeasurementSystem };

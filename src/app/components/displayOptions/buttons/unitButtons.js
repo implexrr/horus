@@ -1,11 +1,11 @@
 import synthesizeElement from '../../../utils/synthesizeElement';
-import { changeSystem } from '../../../services/selectSystem';
+import { changeMeasurementSystem } from '../../../services/selectSystem';
 
 // Create button component that allows user to switch to imperial system
 const imperialButtonEl = () => {
   const e = synthesizeElement('button', { class: 'imperial' });
   e.textContent = 'Imperial';
-  e.addEventListener('click', () => { changeSystem('imperial'); });
+  e.addEventListener('click', () => { changeMeasurementSystem('imperial'); });
   return e;
 };
 
@@ -13,7 +13,7 @@ const imperialButtonEl = () => {
 const metricButtonEl = () => {
   const e = synthesizeElement('button', { class: 'metric' });
   e.textContent = 'Metric';
-  e.addEventListener('click', () => { changeSystem('metric'); });
+  e.addEventListener('click', () => { changeMeasurementSystem('metric'); });
   return e;
 };
 

@@ -6,7 +6,7 @@ import measurementSystemOptionsEl from '../components/displayOptions/measurement
 import forecastOptionsEl from '../components/displayOptions/forecastOptions';
 import appendChildren from '../utils/appendChildren';
 import getRawData from '../services/weatherData';
-import { changeSystem } from '../services/selectSystem';
+import { changeMeasurementSystem } from '../services/selectSystem';
 import changeBackground from '../services/changeBackground';
 
 // Use raw JSON data to render top half of homepage
@@ -45,7 +45,7 @@ const homepage = async (locationQuery, measurementSystem, isFirstLoad) => {
   appendChildren(bodyEl, topEl(rawData), bottomEl(rawData));
 
   // Render data according to chosen system of measurement
-  changeSystem(measurementSystem);
+  changeMeasurementSystem(measurementSystem);
 };
 
 export default homepage;
