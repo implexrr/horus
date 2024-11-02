@@ -23,13 +23,13 @@ function selectMeasurementSystem(oldSys, newSys) {
 }
 
 // Change measurement system, then display new data
-function changeMeasurementSystem(measurementSystem) {
-  if (measurementSystem === 'metric') {
-    selectMeasurementSystem('imperial', measurementSystem);
+function changeMeasurementSystem(newSys) {
+  if (newSys === 'metric') {
+    selectMeasurementSystem('imperial', newSys);
   } else {
-    selectMeasurementSystem('metric', measurementSystem);
+    selectMeasurementSystem('metric', newSys);
   }
-  displayData(measurementSystem);
+  displayData(newSys);
 }
 
 export { getCurrentSystem, changeMeasurementSystem };
