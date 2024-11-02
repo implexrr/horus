@@ -131,9 +131,10 @@ input + button::before {
   background-color: rgba(58, 157, 86, 0.5);
  }
 
- .system-selected {
+ .system-selected, .forecast-selected {
   color: red;
  }
+
  /* snapshot icons */
 
  #snapshot-card > div {

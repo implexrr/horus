@@ -7,6 +7,7 @@ import forecastOptionsEl from '../components/displayOptions/forecastOptions';
 import appendChildren from '../utils/appendChildren';
 import getRawData from '../services/weatherData';
 import { changeMeasurementSystem } from '../services/selectSystem';
+import { changeForecastType } from '../services/selectForecastType';
 import changeBackground from '../services/changeBackground';
 
 // Use raw JSON data to render top half of homepage
@@ -29,7 +30,7 @@ const bottomEl = (rawData) => {
 };
 
 // Use raw JSON data to render homepage
-const homepage = async (locationQuery, measurementSystem, isFirstLoad) => {
+const homepage = async (locationQuery, measurementSystem, forecastType, isFirstLoad) => {
   // Pull raw JSON data according to location query
   const rawData = await getRawData(locationQuery);
   console.log(rawData);
@@ -46,6 +47,9 @@ const homepage = async (locationQuery, measurementSystem, isFirstLoad) => {
 
   // Render data according to chosen system of measurement
   changeMeasurementSystem(measurementSystem);
+
+  // Render data according to chosen forecast type
+  changeForecastType(forecastType);
 };
 
 export default homepage;
