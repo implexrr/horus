@@ -4,7 +4,3 @@
 - no data available for necessary conditions check
 - Daily/hourly switch
 - Bottom half
-
-- add fetching animation
-
-- add reload button (eye of horus)

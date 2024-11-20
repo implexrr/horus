@@ -17,3 +17,5 @@ export default async function firstLoad(location, measurementSystem, forecastTyp
   await homepage(location, measurementSystem, forecastType, true);
   document.querySelector('#weather-form').addEventListener('submit', reloadHomepage);
 }
+
+export { reloadHomepage, firstLoad };

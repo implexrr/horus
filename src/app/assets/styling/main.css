@@ -154,11 +154,16 @@ input + button::before {
  }
 
  .reload {
-  height: 65px;
-  width: 84px;
+  height: 31px;
+  width: 40px;
   background: url(../images/misc/eyeofhorus.svg);
-  margin-right: 3px;
+  margin-right: 3px
 }
+
+.rotate {
+  animation: rotation 0.25s linear;
+}
+
 /* ---------------------------------------------------- */
 /* ---------------------- MISC ------------------------ */
 /* ---------------------------------------------------- */

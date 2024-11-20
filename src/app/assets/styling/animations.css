@@ -1,3 +1,12 @@
 .change-background-transition {
   transition: 300ms ease-in 200ms;
 }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
