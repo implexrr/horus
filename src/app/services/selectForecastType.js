@@ -8,10 +8,8 @@ function getCurrentForecastType() {
 // Display UI data based on chosen forecast type
 function displayNewForecast(forecastType) {
   if (forecastType === 'hourly') {
-    console.log('hourly');
     document.querySelector('#daily-container').classList.add('invisible');
   } else {
-    console.log('daily');
     document.querySelector('#hourly-container').classList.add('invisible');
   }
   document.querySelector(`#${forecastType}-container`).classList.remove('invisible');
