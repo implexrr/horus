@@ -18,11 +18,6 @@ const locationInputEl = () => {
     }
   });
 
-  // Clear the custom error message once the input is valid again
-  el.addEventListener('input', () => {
-    el.setCustomValidity('');
-  });
-
   return el;
 };
 

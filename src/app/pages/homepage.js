@@ -34,22 +34,34 @@ const homepage = async (locationQuery, measurementSystem, forecastType, isFirstL
   // Pull raw JSON data according to location query
   const rawData = await getRawData(locationQuery);
   console.log(rawData);
+  if (rawData === 'location not found') {
+    console.log('Cant find this place');
+    // Make "Can't find" error object visible and position absolutely
+  } else if (rawData === 'bad server response') {
+    console.log('servers are down');
+    // Make "Servers down" error object visible and position absolutely
+  } else {
+    // Reset homepage content
+    const bodyEl = document.querySelector('body');
+    bodyEl.textContent = '';
 
-  // Reset homepage content
-  const bodyEl = document.querySelector('body');
-  bodyEl.textContent = '';
+    // Change background based on time and load iteration
+    changeBackground(rawData, isFirstLoad);
 
-  // Change background based on time and load iteration
-  changeBackground(rawData, isFirstLoad);
+    // Append top and bottom half of homepage to body
+    appendChildren(bodyEl, topEl(rawData), bottomEl(rawData));
 
-  // Append top and bottom half of homepage to body
-  appendChildren(bodyEl, topEl(rawData), bottomEl(rawData));
+    // Render data according to chosen system of measurement
+    changeMeasurementSystem(measurementSystem);
 
-  // Render data according to chosen system of measurement
-  changeMeasurementSystem(measurementSystem);
+    // Render data according to chosen forecast type
+    changeForecastType(forecastType);
 
-  // Render data according to chosen forecast type
-  changeForecastType(forecastType);
+    // Clear any input error messages upon clicking any part of the website
+    document.body.addEventListener('click', () => {
+      document.querySelector('input#location').setCustomValidity('');
+    });
+  }
 };
 
 export default homepage;

@@ -3,12 +3,6 @@ const header = {
   mode: 'cors',
 };
 
-// Syntactically validate location input
-function locationQueryValid(locationQuery) {
-  const locationPattern = /^(?=.*[a-zA-Z])[a-zA-Z0-9, .-]+$/;
-  return locationPattern.test(locationQuery);
-}
-
 // Generate URI encoded location query
 function generateEncodedLocation(locationQuery) {
   const encodedLocation = encodeURIComponent(locationQuery);
@@ -23,30 +17,24 @@ function generateURL(locationQuery) {
 }
 
 // Check server response
-function isValidResponse(response) {
-  if (response.ok) { return true; }
+function checkServerResponse(response) {
+  if (response.ok) { return 'response ok'; }
   if (response.status === 400) {
-    console.log('Sorry, we couldn\'t find that location');
-  } else {
-    console.log(`Unexpected server response: ${response.status}`);
+    return 'location not found';
   }
-  return false;
+  console.log(`Unexpected server response: ${response.status}`);
+  return 'bad server response';
 }
 
 // Pull raw weather JSON data from API based on location query
 export default async function getRawData(locationQuery) {
-  // Generate URL to send to server if location query is syntactically valid
-  if (!locationQueryValid(locationQuery)) {
-    console.log('invalid location query');
-    return null;
-  }
   const url = generateURL(locationQuery);
 
   // Try fetching & converting raw data from weather API
   try {
     const response = await fetch(url, header);
-    if (!isValidResponse(response)) {
-      return null;
+    if (checkServerResponse(response) !== 'response ok') {
+      return checkServerResponse(response);
     }
     const rawData = await response.json();
     return rawData;
