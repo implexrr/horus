@@ -37,16 +37,22 @@ const homepage = async (locationQuery, measurementSystem, forecastType, isFirstL
   const bodyEl = document.querySelector('body');
   console.log(rawData);
 
-  // Catch data not retrievable errors
   if (rawData === 'location not found') {
+    // If location data can't be found
     const locationErrorMsg = locationNotFoundEl(locationQuery);
     bodyEl.append(locationErrorMsg);
     locationErrorMsg.addEventListener('animationend', () => {
       locationErrorMsg.remove();
     });
   } else if (rawData === 'bad server response') {
-    bodyEl.append(locationNotFoundEl(serverDownEl()));
+    // If server not responding
+    const serverErrorMsg = serverDownEl();
+    bodyEl.append(serverErrorMsg);
+    serverErrorMsg.addEventListener('animationend', () => {
+      serverErrorMsg.remove();
+    });
   } else {
+    // If data loaded as expected
     // Reset homepage content
     bodyEl.textContent = '';
 
