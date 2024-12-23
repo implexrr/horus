@@ -9,6 +9,7 @@ import getRawData from '../services/weatherData';
 import { changeMeasurementSystem } from '../services/selectSystem';
 import { changeForecastType } from '../services/selectForecastType';
 import changeBackground from '../services/changeBackground';
+import { locationNotFoundEl, serverDownEl } from '../components/cards/errorCards';
 
 // Use raw JSON data to render top half of homepage
 const topEl = (rawData) => {
@@ -33,16 +34,20 @@ const bottomEl = (rawData) => {
 const homepage = async (locationQuery, measurementSystem, forecastType, isFirstLoad) => {
   // Pull raw JSON data according to location query
   const rawData = await getRawData(locationQuery);
+  const bodyEl = document.querySelector('body');
   console.log(rawData);
+
+  // Catch data not retrievable errors
   if (rawData === 'location not found') {
-    console.log('Cant find this place');
-    // Make "Can't find" error object visible and position absolutely
+    const locationErrorMsg = locationNotFoundEl(locationQuery);
+    bodyEl.append(locationErrorMsg);
+    locationErrorMsg.addEventListener('animationend', () => {
+      locationErrorMsg.remove();
+    });
   } else if (rawData === 'bad server response') {
-    console.log('servers are down');
-    // Make "Servers down" error object visible and position absolutely
+    bodyEl.append(locationNotFoundEl(serverDownEl()));
   } else {
     // Reset homepage content
-    const bodyEl = document.querySelector('body');
     bodyEl.textContent = '';
 
     // Change background based on time and load iteration

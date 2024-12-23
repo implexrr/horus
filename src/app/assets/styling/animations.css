@@ -10,3 +10,18 @@
     transform: rotate(359deg);
   }
 }
+
+@keyframes show-hide {
+  0% {
+    opacity: 0; /* Start hidden */
+  }
+  10% {
+    opacity: 1; /* Quickly appear */
+  }
+  90% {
+    opacity: 1; /* Stay visible */
+  }
+  100% {
+    opacity: 0; /* Fade out */
+  }
+}
