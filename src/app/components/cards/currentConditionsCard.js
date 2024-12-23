@@ -72,7 +72,10 @@ const precipEl = (currentConditions) => {
   const imperialPrecip = (metricPrecip * MM_TO_IN_FACTOR).toFixed(2);
   const { preciptype } = currentConditions;
   const { precipprob } = currentConditions;
-  const el = currentConditionsAttr('div', 'precip', `${precipprob}% chance of ${preciptype}, ${metricPrecip}`, 'mm', `${precipprob}% chance of ${preciptype}, ${imperialPrecip}`, 'in', 'Precipitation:\u00A0');
+  let el = currentConditionsAttr('div', 'precip', `${precipprob}% chance of ${preciptype}, ${metricPrecip}`, 'mm', `${precipprob}% chance of ${preciptype}, ${imperialPrecip}`, 'in', 'Precipitation:\u00A0');
+  if ((metricPrecip === 0) || (preciptype === null) || (precipprob === 0)) {
+    el = currentConditionsAttr('div', 'precip', 'N/A', '', 'N/A', '', 'Precipitation:\u00A0');
+  }
   return el;
 };
 
