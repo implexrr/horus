@@ -127,7 +127,7 @@
 .forecast-card.hourly {
   background-color: rgba(154, 57, 57, 0.5);
   display: grid;
-  grid-template-columns: repeat(3, 33.3%);
+  grid-template-columns: repeat(3, 1fr);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
@@ -136,10 +136,22 @@
 .forecast-card.daily {
   background-color: rgba(58, 157, 86, 0.5);
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
+ }
+
+ .forecast-card.daily > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+
+ .forecast-card.hourly > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
  }
 
 
