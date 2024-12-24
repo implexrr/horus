@@ -50,7 +50,7 @@ const conditionsEl = (hourData) => {
 
 // Create component for hourly forecast card
 const forecastCardHourlyEl = (hourData) => {
-  const el = synthesizeElement('div', { class: 'forecast-card daily' });
+  const el = synthesizeElement('div', { class: 'forecast-card hourly' });
   appendChildren(
     el,
     timeEl(hourData),

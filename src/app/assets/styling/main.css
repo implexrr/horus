@@ -36,10 +36,14 @@
 
 #snapshot-card {
   box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.5);
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-top: 0.8rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
   border-radius: 10px;
+}
+
+#snapshot-card > * {
+  margin-top: 0.1rem;
 }
 
 #current-conditions-container {
@@ -51,11 +55,22 @@
 
 #current-conditions-card {
   box-shadow: inset 0 0 0 1000px rgba(28, 30, 35, 0.5);
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-top: 0.8rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
   border-radius: 10px;
 }
+
+#current-conditions-card > * {
+  margin-top: 0.1rem;
+}
+
+.reload-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.2rem;
+}
+
 /* ---------------------------------------------------- */
 /* ---------------------- TOP HALF -------------------- */
 /* ---------------------------------------------------- */
@@ -81,6 +96,18 @@
   height: 100%;
 }
 
+#daily-container:not(.invisible) {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(14, 1fr);
+}
+
+#hourly-container:not(.invisible) {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(24, 1fr);
+}
+
 .forecast {
   padding: 3px;
   height: 100%;
@@ -96,9 +123,31 @@
   display: flex;
   justify-content: space-between;
 }
+
+.forecast-card.hourly {
+  background-color: rgba(154, 57, 57, 0.5);
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+ }
+
+.forecast-card.daily {
+  background-color: rgba(58, 157, 86, 0.5);
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+ }
+
+
+
 /* ---------------------------------------------------- */
 /* ---------------------- BOTTOM HALF ----------------- */
 /* ---------------------------------------------------- */
+
 
 
 
@@ -122,15 +171,6 @@ input + button::before {
   content: url('https://img.icons8.com/?size=10&id=7695&format=png&color=000000');
   /* TODO: CHANGE IMG SOURCE ABOVE */
 }
-
- .forecast-card.hourly {
-  background-color: rgba(154, 57, 57, 0.5);
- }
-
- .forecast-card.daily {
-  background-color: rgba(58, 157, 86, 0.5);
- }
-
  .system-selected, .forecast-selected {
   color: red;
  }
@@ -164,10 +204,6 @@ input + button::before {
   animation: rotation 0.25s linear;
 }
 
-/* ---------------------------------------------------- */
-/* ---------------------- MISC ------------------------ */
-/* ---------------------------------------------------- */
-
 .hidden-message {
   position: absolute;
   top: 50%;
@@ -180,3 +216,7 @@ input + button::before {
   opacity: 0; 
   animation: show-hide 3s forwards;
 }
+
+/* ---------------------------------------------------- */
+/* ---------------------- MISC ------------------------ */
+/* ---------------------------------------------------- */

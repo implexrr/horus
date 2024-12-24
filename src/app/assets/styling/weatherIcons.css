@@ -2,153 +2,153 @@
 .clear-day {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/clear-day.svg) no-repeat center;
+  background: url(../images/weatherIcons/clear-day.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .clear-night {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/clear-night.svg) no-repeat center;
+  background: url(../images/weatherIcons/clear-night.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .cloudy {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/cloudy.svg) no-repeat center;
+  background: url(../images/weatherIcons/cloudy.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .fog {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/fog.svg) no-repeat center;
+  background: url(../images/weatherIcons/fog.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .hail {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/hail.svg) no-repeat center;
+  background: url(../images/weatherIcons/hail.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .partly-cloudy-day {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/partly-cloudy-day.svg) no-repeat center;
+  background: url(../images/weatherIcons/partly-cloudy-day.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .partly-cloudy-night {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/partly-cloudy-night.svg) no-repeat center;
+  background: url(../images/weatherIcons/partly-cloudy-night.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .rain-snow-showers-day {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/rain-snow-showers-day.svg) no-repeat center;
+  background: url(../images/weatherIcons/rain-snow-showers-day.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .rain-snow-showers-night {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/rain-snow-showers-night.svg) no-repeat center;
+  background: url(../images/weatherIcons/rain-snow-showers-night.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .rain-snow {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/rain-snow.svg) no-repeat center;
+  background: url(../images/weatherIcons/rain-snow.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .rain {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/rain.svg) no-repeat center;
+  background: url(../images/weatherIcons/rain.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .showers-day {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/showers-day.svg) no-repeat center;
+  background: url(../images/weatherIcons/showers-day.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .showers-night {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/showers-night.svg) no-repeat center;
+  background: url(../images/weatherIcons/showers-night.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .sleet {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/sleet.svg) no-repeat center;
+  background: url(../images/weatherIcons/sleet.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .snow-showers-day {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/snow-showers-day.svg) no-repeat center;
+  background: url(../images/weatherIcons/snow-showers-day.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .snow-showers-night {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/snow-showers-night.svg) no-repeat center;
+  background: url(../images/weatherIcons/snow-showers-night.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .snow {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/snow.svg) no-repeat center;
+  background: url(../images/weatherIcons/snow.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .thunder-rain {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/thunder-rain.svg) no-repeat center;
+  background: url(../images/weatherIcons/thunder-rain.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .thunder-showers-day {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/thunder-showers-day.svg) no-repeat center;
+  background: url(../images/weatherIcons/thunder-showers-day.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .thunder-showers-night {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/thunder-showers-night.svg) no-repeat center;
+  background: url(../images/weatherIcons/thunder-showers-night.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .thunder {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/thunder.svg) no-repeat center;
+  background: url(../images/weatherIcons/thunder.svg) no-repeat left center;
   margin-right: 3px;
 }
 
 .wind {
   height: 30px;
   width: 100%;
-  background: url(../images/weatherIcons/wind.svg) no-repeat center;
+  background: url(../images/weatherIcons/wind.svg) no-repeat left center;
   margin-right: 3px;
 }
