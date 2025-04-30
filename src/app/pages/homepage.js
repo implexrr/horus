@@ -35,7 +35,6 @@ const homepage = async (locationQuery, measurementSystem, forecastType, isFirstL
   // Pull raw JSON data according to location query
   const rawData = await getRawData(locationQuery);
   const bodyEl = document.querySelector('body');
-  console.log(rawData);
 
   if (rawData === 'location not found') {
     // If location data can't be found
